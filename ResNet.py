@@ -1,3 +1,5 @@
+#CREDIT: https://keras.io/zh/examples/cifar10_resnet/
+
 import keras
 import tensorflow as tf
 import keras

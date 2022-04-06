@@ -1,3 +1,5 @@
+# CREDIT: https://medium.com/swlh/alexnet-with-tensorflow-46f366559ce8
+
 import tensorflow as tf
 import keras
 from tensorflow.keras import datasets, layers, models, losses
