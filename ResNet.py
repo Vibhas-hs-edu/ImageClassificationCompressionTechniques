@@ -1,4 +1,6 @@
-#CREDIT: https://keras.io/zh/examples/cifar10_resnet/
+#----------------------------CREDIT-------------------------------#
+# Code for resnet_layer and resnet_v1 come from the following link: 
+# https://keras.io/zh/examples/cifar10_resnet/
 
 import keras
 import tensorflow as tf
