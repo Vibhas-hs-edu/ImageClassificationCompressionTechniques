@@ -1,4 +1,6 @@
-# CREDIT: https://medium.com/swlh/alexnet-with-tensorflow-46f366559ce8
+#--------------- CREDIT--------------------------------------#
+# Code for building the model is slightly modified from the following link 
+# https://medium.com/swlh/alexnet-with-tensorflow-46f366559ce8
 
 import tensorflow as tf
 import keras
