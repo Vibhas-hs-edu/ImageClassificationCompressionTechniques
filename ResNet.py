@@ -19,10 +19,29 @@ import numpy as np
 import os
 
 class ResNet:
-    def __init__(self, input_shape, layers, num_classes=10) -> None:
+    def __init__(self, input_shape, depth, num_classes=10) -> None:
+        """
+        Class to abstract away implementation of ResNet. Supports ResNet-{6n+2} 
+        as well as ResNet101
 
-        # TODO account for Resnets not of the form 6n+2 (use the builtin Tensorflow modules for this I think)
-        self.model = self.resnet_v1(input_shape, layers, num_classes=num_classes)
+        Parameters:
+        ---------------
+        input_shape (3-tuple): shape of the input (e.g. x_train.shape[1:])
+        depth (int) : the depth of the network. TODO: what are valid depths?
+        num_classes (int) : number of classes in the data 
+        """
+
+        # TODO implement logic
+        depth_valid = depth == 101 or (depth-2)%6 ==0
+
+        if not depth_valid:
+            raise ValueError('Only supports depth of form 6n+2 or depth of 101')
+        
+        if depth==101:
+            self.model = tf.keras.applications.resnet.ResNet101(include_top=True,
+             weights=None, input_shape=input_shape,classes=num_classes)
+        else:
+            self.model = self.resnet_v1(input_shape, depth, num_classes=num_classes)
 
     def resnet_layer(self, inputs,
                     num_filters=16,
@@ -142,15 +161,3 @@ class ResNet:
         model = Model(inputs=inputs, outputs=outputs)
         return model
 
-# -----CREDIT: https://keras.io/zh/examples/cifar10_resnet/ --------------#
-
-def driver():
-    #----------Create Resnet-44-------------#
-    res = ResNet((32,32,3), 44)
-    #---------------------------------------#
-
-
-    res.model.compile(loss='categorical_crossentropy',optimizer=SGD(),metrics=['accuracy'])
-
-if __name__ == '__main__':
-    driver()
