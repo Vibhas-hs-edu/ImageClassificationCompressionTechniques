@@ -7,6 +7,7 @@ import unittest
 import numpy as np
 import tensorflow as tf
 from tensorflow.keras import datasets, losses
+from tensorflow.keras.optimizers import Adam, SGD
 
 SKIP_ALEXNET = True
 SKIP_RESNET = False
@@ -56,10 +57,35 @@ class TestResNet(unittest.TestCase):
         pass
     
     def test(self):
-        pass
+        #----------Create Resnet-44-------------#
+        res = ResNet((32,32,3), 44)
+        res.model.compile(loss='categorical_crossentropy',optimizer=SGD(),metrics=['accuracy'])
 
-    def test2(self):
-        pass
+    def testRes101(self):
+        num_classes = 10
+
+        # Load the CIFAR10 data.
+        (x_train, y_train), (x_test, y_test) = datasets.cifar10.load_data()
+
+        # Input image dimensions.
+        input_shape = x_train.shape[1:]
+
+        # Normalize data.
+        x_train = x_train.astype('float32') / 255
+        x_test = x_test.astype('float32') / 255
+
+        y_train = tf.keras.utils.to_categorical(y_train, num_classes)
+        y_test = tf.keras.utils.to_categorical(y_test, num_classes)
+
+        print("Should be (32,32,3)")
+        print(x_train.shape[1:])
+
+        res101 = ResNet((32,32,3), 101)
+        res101.model.compile(loss='categorical_crossentropy',optimizer=SGD(),metrics=['accuracy'])
+
+        # In one epoch, takes 30 minutes to train on my machine and gets 30% accuracy
+        history = res101.model.fit(x_train, y_train,batch_size=128,epochs=1)
+
 # Run the tests
 if __name__=='__main__':
     unittest.main()
