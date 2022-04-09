@@ -36,3 +36,18 @@ class Storagebucket:
             file_path = os.path.join(folder_path, file_name)
             result = self.upload_file_to_bucket(bucket_name = bucket_name, file_path = file_path, blob_name = blob_name)
             assert result == True, f"Failed to upload file {file_name}"
+    
+    def download_files_from_bucket(self, bucket_name, file_name):
+        pass
+
+    def download_folders_from_bucket(self, bucket_name, folder_name, save_folder = None):
+        bucket = self.get_bucket(bucket_name = bucket_name)
+        blobs = bucket.list_blobs(prefix = folder_name) # Get list of files
+        if save_folder == None:
+            save_folder = folder_name
+        if not os.path.exists(save_folder):
+            os.makedirs(save_folder)
+        for blob in blobs:
+            p = Path(blob.name)
+            save_path = os.path.join(save_folder, p.name)
+            blob.download_to_filename(save_path)

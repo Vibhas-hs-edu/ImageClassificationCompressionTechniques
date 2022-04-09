@@ -1,0 +1,1 @@
+BUCKET_NAME = 'covid-ct-dataset'
