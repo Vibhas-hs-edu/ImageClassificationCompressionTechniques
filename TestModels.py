@@ -10,11 +10,14 @@ from tensorflow.keras import datasets, losses
 from tensorflow.keras.optimizers import Adam, SGD
 
 SKIP_ALEXNET = True
-SKIP_RESNET = False
+SKIP_RESNET_RUN = True
 SKIP_VGG = True
 SKIP_MNIST = True
+SKIP_SAVE_RES20 = True
 
 ALEXNET_MNIST_MSG = 'Skipping training MNIST on AlexNet to save time'
+
+RES20_FILE = 'res20.h5'
 
 # alex = AlexNet((227,227,3), 10)
 
@@ -61,6 +64,7 @@ class TestResNet(unittest.TestCase):
         res = ResNet((32,32,3), 44)
         res.model.compile(loss='categorical_crossentropy',optimizer=SGD(),metrics=['accuracy'])
 
+    @unittest.skipIf(SKIP_RESNET_RUN,'Already ran the model')
     def testRes101(self):
         num_classes = 10
 
@@ -85,6 +89,58 @@ class TestResNet(unittest.TestCase):
 
         # In one epoch, takes 30 minutes to train on my machine and gets 30% accuracy
         history = res101.model.fit(x_train, y_train,batch_size=128,epochs=1)
+
+        # res101.model.save('/saved_models/res101.h5')
+    
+    @unittest.skipIf(SKIP_SAVE_RES20, 'Already saved ResNet20')
+    def test_save_res20(self):
+
+        num_classes = 10
+
+        # Load the CIFAR10 data.
+        (x_train, y_train), (x_test, y_test) = datasets.cifar10.load_data()
+
+        # Input image dimensions.
+        input_shape = x_train.shape[1:]
+
+        # Normalize data.
+        x_train = x_train.astype('float32') / 255
+        x_test = x_test.astype('float32') / 255
+
+        y_train = tf.keras.utils.to_categorical(y_train, num_classes)
+        y_test = tf.keras.utils.to_categorical(y_test, num_classes)
+
+        print("Should be (32,32,3)")
+        print(x_train.shape[1:])
+
+        res20 = ResNet(input_shape=input_shape,depth=20)
+        res20.model.compile(loss='categorical_crossentropy',optimizer=SGD(),metrics=['accuracy'])
+
+        # In one epoch, takes 30 minutes to train on my machine and gets 30% accuracy
+        print("Training ResNet-20")
+        history = res20.model.fit(x_train, y_train,batch_size=128,epochs=1)
+        
+        # Saving model
+        print("Saving model")
+        res20.model.save(RES20_FILE)
+    
+    def test_load_res20(self):
+        
+        res20 = tf.keras.models.load_model(RES20_FILE)
+
+        trainable = np.sum([np.prod(v.get_shape()) for v in res20.trainable_weights])
+        non_trainable = np.sum([np.prod(v.get_shape()) for v in res20.non_trainable_weights])
+        print("For saved resnet20:")
+        print(f"Trainable: {trainable:,}\nNon-Trainable:{non_trainable:,}\nTotal:{trainable+non_trainable:,}")
+
+
+        # h5 is not the proper format to save in, wants a .pb file. 
+        # TODO: FIX
+        converter = tf.lite.TFLiteConverter.from_saved_model(RES20_FILE)
+        res20lite = converter.convert()
+        res20lite.summary()
+
+
 
 # Run the tests
 if __name__=='__main__':
