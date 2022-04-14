@@ -200,10 +200,17 @@ class TestCluster(unittest.TestCase):
         and the accuracy after clustering actually increased. I suspect this 
         only happened because the accuracy was so low to begin with.
 
+        Also, takes significantly less time to train for one epoch. 
+        About 3.5 minutes on my laptop, I think it was like 30 minutes 
+        originally though I could be remembering the time taken for ResNet101
+
         TODO: Need to have a higher accuracy model and see how much clustering 
         affects the accuracy
         """
         # First lets see what the accuracy looks like:
+        
+        print('BEFORE CLUSTERING:')
+        self.model.summary()
 
         results = self.model.evaluate(self.x_test,self.y_test)
 
@@ -214,6 +221,9 @@ class TestCluster(unittest.TestCase):
         c = Cluster(self.model)
         c.cluster(16)
         c.finetune(self.x_train,self.y_train)
+
+        print('AFTER CLUSTERING:')
+        c.model.summary()
 
         new_results = c.model.evaluate(self.x_test,self.y_test)
         new_acc = new_results[1] *100 
