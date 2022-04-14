@@ -1,29 +1,44 @@
+import os
 from pickle import FALSE
 from pickletools import optimize
-from AlexNet import AlexNet
-from ResNet import ResNet
-from VGG import VGG16, VGG19
+import tempfile
+from Models.AlexNet import AlexNet
+from Models.ResNet import ResNet
+from Models.VGG import VGG16, VGG19
+from Models.Compression import Cluster
 import unittest
 import numpy as np
 import tensorflow as tf
 from tensorflow.keras import datasets, losses
 from tensorflow.keras.optimizers import Adam, SGD
 
-SKIP_ALEXNET = True
-SKIP_RESNET_RUN = True
-SKIP_VGG = True
-SKIP_MNIST = True
-SKIP_SAVE_RES20 = True
 
+#---Constants for AlexNet Tests----#
+SKIP_ALEXNET_TESTS = True
 ALEXNET_MNIST_MSG = 'Skipping training MNIST on AlexNet to save time'
+SKIP_MNIST = True
+#----------------------------------#
 
+
+#---Constants for ResNet Tests----#
+SKIP_RESNET_TESTS = True
+SKIP_RESNET_RUN = True
+SKIP_SAVE_RES20 = True
+RES20_NOT_SAVED = False
 RES20_FILE = 'res20.h5'
+#----------------------------------#
+
+# ---Constants for Cluster Test-----#
+SKIP_CLUSTER_TESTS = False
+
+#-----------------------------------#
 
 # alex = AlexNet((227,227,3), 10)
 
 # vgg16 = VGG16((32,32,3), 10)
 # vgg19 = VGG19((32,32,3),10)
 
+@unittest.skipIf(SKIP_ALEXNET_TESTS, ALEXNET_MNIST_MSG)
 class TestAlexNet(unittest.TestCase):
 
     def setUp(self) -> None:
@@ -32,7 +47,7 @@ class TestAlexNet(unittest.TestCase):
     def tearDown(self) -> None:
         pass
 
-    @unittest.skipIf(SKIP_ALEXNET and SKIP_MNIST, ALEXNET_MNIST_MSG)
+    @unittest.skipIf(SKIP_ALEXNET_TESTS and SKIP_MNIST, ALEXNET_MNIST_MSG)
     def test_mnist(self):
         (x_train,y_train),(x_test,y_test) = datasets.mnist.load_data()
         x_train = tf.pad(x_train, [[0, 0], [2,2], [2,2]])/255
@@ -55,9 +70,11 @@ class TestAlexNet(unittest.TestCase):
         # I tested it and it achieves greater than 98% validation accuracy
         history = alex.model.fit(x_train, y_train, batch_size=64, epochs=1,
                                              validation_data=(x_val, y_val))
+@unittest.skipIf(SKIP_RESNET_TESTS, 'Have already run resnet tests')
 class TestResNet(unittest.TestCase):
     def setUp(self) -> None:
-        pass
+        self.tmpdir = tempfile.mkdtemp()
+        print(f"The temp folder is: {self.tmpdir}")
     
     def test(self):
         #----------Create Resnet-44-------------#
@@ -122,8 +139,13 @@ class TestResNet(unittest.TestCase):
         
         # Saving model
         print("Saving model")
-        res20.model.save(RES20_FILE)
+
+
+        
+        save_path = os.path.join(os.getcwd(),'resnet20/1/')
+        tf.saved_model.save(res20.model,save_path)
     
+    @unittest.skipIf(RES20_NOT_SAVED, "Haven't saved the model yet")
     def test_load_res20(self):
         
         res20 = tf.keras.models.load_model(RES20_FILE)
@@ -136,9 +158,74 @@ class TestResNet(unittest.TestCase):
 
         # h5 is not the proper format to save in, wants a .pb file. 
         # TODO: FIX
-        converter = tf.lite.TFLiteConverter.from_saved_model(RES20_FILE)
+        save_path = os.path.join(os.getcwd(),'resnet20/1/')
+        converter = tf.lite.TFLiteConverter.from_saved_model(save_path)
+
+        # Add in weight quantization:
+        converter.optimizations = [tf.lite.Optimize.DEFAULT]
+
         res20lite = converter.convert()
-        res20lite.summary()
+
+        with open('resnet20_quantized.tflite', 'wb') as f:
+            f.write(res20lite)
+
+class TestCluster(unittest.TestCase):
+
+    def setUp(self) -> None:
+        self.model = tf.keras.models.load_model(RES20_FILE)
+
+        num_classes = 10
+
+        # Load the CIFAR10 data.
+        (x_train, y_train), (x_test, y_test) = datasets.cifar10.load_data()
+
+        # Input image dimensions.
+        input_shape = x_train.shape[1:]
+
+        # Normalize data.
+        self.x_train = x_train.astype('float32') / 255
+        self.x_test = x_test.astype('float32') / 255
+
+        self.y_train = tf.keras.utils.to_categorical(y_train, num_classes)
+        self.y_test = tf.keras.utils.to_categorical(y_test, num_classes)
+    
+    def test_cluster_acc16(self):
+        """
+        Test the cluster class for num_clusters = 16. Test will pass if accuracy
+        of the clustered model is not more than 2 percentage points less than 
+        the original accuracy
+
+        FINDINGS:
+        Tested using ResNet-20 trained for one epoch. Initial accuracy was low
+        and the accuracy after clustering actually increased. I suspect this 
+        only happened because the accuracy was so low to begin with.
+
+        TODO: Need to have a higher accuracy model and see how much clustering 
+        affects the accuracy
+        """
+        # First lets see what the accuracy looks like:
+
+        results = self.model.evaluate(self.x_test,self.y_test)
+
+        # print(f"Results: {results}")
+        prev_acc = results[1] *100
+        print(f"Accuracy before clustering: {prev_acc : 0.2f}%")
+
+        c = Cluster(self.model)
+        c.cluster(16)
+        c.finetune(self.x_train,self.y_train)
+
+        new_results = c.model.evaluate(self.x_test,self.y_test)
+        new_acc = new_results[1] *100 
+
+        print(f"Accuracy after clustering: { new_acc: 0.2f}%")
+
+        decrease_in_acc = prev_acc-new_acc
+
+        self.assertLess(decrease_in_acc,2,"Accuracy decreased by greater than 2% after cluseting")
+
+
+
 
 
 
