@@ -5,12 +5,13 @@ import tempfile
 from Models.AlexNet import AlexNet
 from Models.ResNet import ResNet
 from Models.VGG import VGG16, VGG19
-from Models.Compression import Cluster
+from Models.Compression import Cluster, Prune
 import unittest
 import numpy as np
 import tensorflow as tf
 from tensorflow.keras import datasets, losses
 from tensorflow.keras.optimizers import Adam, SGD
+from tensorflow.keras import layers
 
 
 #---Constants for AlexNet Tests----#
@@ -28,8 +29,9 @@ RES20_NOT_SAVED = False
 RES20_FILE = 'res20.h5'
 #----------------------------------#
 
-# ---Constants for Cluster Test-----#
-SKIP_CLUSTER_TESTS = False
+# ---Constants for Compression Tests-----#
+SKIP_CLUSTER_TESTS = True
+SKIP_PRUNE_TESTS = False
 
 #-----------------------------------#
 
@@ -169,7 +171,7 @@ class TestResNet(unittest.TestCase):
         with open('resnet20_quantized.tflite', 'wb') as f:
             f.write(res20lite)
 
-class TestCluster(unittest.TestCase):
+class TestCompression(unittest.TestCase):
 
     def setUp(self) -> None:
         self.model = tf.keras.models.load_model(RES20_FILE)
@@ -188,7 +190,55 @@ class TestCluster(unittest.TestCase):
 
         self.y_train = tf.keras.utils.to_categorical(y_train, num_classes)
         self.y_test = tf.keras.utils.to_categorical(y_test, num_classes)
-    
+
+    @unittest.skipIf(SKIP_PRUNE_TESTS, 'Already ran prune tests, want to save time')
+    def test_prune(self):
+        """
+        Test the prune class
+        """
+        # print('BEFORE PRUNING:')
+        # self.model.summary()
+
+        # Try pretrained model with higher accuracy:
+        # print(f"Trying Pretrained ResNet50")
+        # r50 = tf.keras.applications.resnet50.ResNet50(include_top = False, input_shape = self.x_train.shape[1:])
+        # # r50.trainable = False
+
+        # high_acc_model = tf.keras.models.Sequential()
+        # high_acc_model.add(r50)
+        # high_acc_model.add(layers.Flatten())
+        # high_acc_model.add(layers.Dense(10, activation='softmax'))
+
+
+
+        # high_acc_model.compile(loss='categorical_crossentropy',optimizer='adam', metrics=['accuracy'])
+        # _, r50_acc = high_acc_model.evaluate(self.x_test,self.y_test)
+        # print(f"Accuracy of pretrained res50 : {100 * r50_acc : 0.2f}")
+
+        _, baseline_acc = self.model.evaluate(self.x_test,self.y_test)
+        baseline_acc *= 100
+
+        print(f"Baseline pruning accuracy is: {baseline_acc: 0.2f}")
+
+        # PRUNE
+        p = Prune(self.model)
+        p.prune(self.x_train,self.y_train)
+
+        # print('AFTER PRUNING:')
+        # p.model.summary()
+
+        _, new_acc = p.model.evaluate(self.x_test,self.y_test)
+        new_acc *= 100
+
+        print(f"Accuracy after pruning is {new_acc : 0.2f}")
+
+        self.assertLess(baseline_acc-new_acc,2, f"The accuracy dropped by {baseline_acc-new_acc : 0.2f} which is more than 2")
+
+
+
+
+
+    @unittest.skipIf(SKIP_CLUSTER_TESTS, 'Already ran cluster tests, want to save time')
     def test_cluster_acc16(self):
         """
         Test the cluster class for num_clusters = 16. Test will pass if accuracy
