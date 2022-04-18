@@ -163,5 +163,65 @@ class Cluster:
 
 
 
+class Quantize:
+    def __init__(self, trained_model) -> None:
+        """
+        Class to abstract away quantization aware training
 
+        Takes in trained tensorflow model and performs quantization on it to reduce 
+        space
+
+        Params:
+        ---------------
+        trained_model: a trained tensorflow model.E.g. ResNet-20 trained on 
+        CIFAR-10
+
+        history: history of the model after fine tuning occurs
+
+        Usage:
+        ------------
+        Construct an instance with a pretrained tensorflow model. Then call 
+        quantize() followed by finetune()
+        """
+
+        self.model = trained_model
+
+        """
+        For internal use only
+        """
+        self.quantized_flag = False
+    
+    def quantize(self):
+        """
+        Quantizes network weights and recompiles the model
+        """
+        quantize_model = tfmot.quantization.keras.quantize_model
+
+        q_model = quantize_model(self.model)
+
+        # `quantize_model` requires a recompile.
+        q_model.compile(optimizer='adam',
+                    loss='categorical_crossentropy',
+                    metrics=['accuracy'])
+
+        self.model = q_model
+
+        self.quantized_flag = True
+
+    def finetune(self, x_train, y_train, batch_size=256, epochs=1):
+        """
+        Performs fine-tuning with newly quantized weights
+
+        Parameters:
+        -------------
+        x_train: the training images
+        y_train: the labels for the training images
+        batch_size: the batch size
+        epochs: number of epochs to fine tune for
+        """
+        
+        if self.quantized_flag:
+            self.model.fit(x_train,y_train, batch_size=batch_size, epochs=epochs)
+        else:
+            raise RuntimeError('Must call quantize() before calling finetune()')
 
