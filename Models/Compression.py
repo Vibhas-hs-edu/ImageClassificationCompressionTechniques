@@ -190,6 +190,7 @@ class Quantize:
         For internal use only
         """
         self.quantized_flag = False
+        self.finetuned_flag = False
     
     def quantize(self):
         """
@@ -222,6 +223,7 @@ class Quantize:
         
         if self.quantized_flag:
             self.model.fit(x_train,y_train, batch_size=batch_size, epochs=epochs)
+
+            self.finetuned_flag = True
         else:
             raise RuntimeError('Must call quantize() before calling finetune()')
-
