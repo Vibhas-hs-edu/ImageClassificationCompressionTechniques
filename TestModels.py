@@ -1,6 +1,4 @@
 import os
-from pickle import FALSE
-from pickletools import optimize
 import tempfile
 from Models.AlexNet import AlexNet
 from Models.ResNet import ResNet
