@@ -3,7 +3,7 @@ import tempfile
 from Models.AlexNet import AlexNet
 from Models.ResNet import ResNet
 from Models.VGG import VGG16, VGG19
-from Models.Compression import Cluster, Prune
+from Models.Compression import Cluster, Prune, Quantize
 import unittest
 import numpy as np
 import tensorflow as tf
@@ -29,7 +29,8 @@ RES20_FILE = 'res20.h5'
 
 # ---Constants for Compression Tests-----#
 SKIP_CLUSTER_TESTS = True
-SKIP_PRUNE_TESTS = False
+SKIP_PRUNE_TESTS = True
+SKIP_QUNATIZE_TESTS = False
 
 #-----------------------------------#
 
@@ -281,6 +282,32 @@ class TestCompression(unittest.TestCase):
         decrease_in_acc = prev_acc-new_acc
 
         self.assertLess(decrease_in_acc,2,"Accuracy decreased by greater than 2% after cluseting")
+
+    @unittest.skipIf(SKIP_QUNATIZE_TESTS, 'Already ran quantize tests, want to save time')
+    def test_quantize(self):
+        """
+        Tests quantization aware training
+        """
+
+        results = self.model.evaluate(self.x_test,self.y_test)
+
+        # print(f"Results: {results}")
+        prev_acc = results[1] *100
+        print(f"Accuracy before quantizing: {prev_acc : 0.2f}%")
+
+
+        q = Quantize(self.model)
+        q.quantize()
+        q.finetune(self.x_train, self.y_train)
+
+        new_results = q.model.evaluate(self.x_test,self.y_test)
+        new_acc = new_results[1] *100 
+
+        print(f"Accuracy after quantizing: { new_acc: 0.2f}%")
+
+        decrease_in_acc = prev_acc-new_acc
+
+        self.assertLess(decrease_in_acc,3,"Accuracy decreased by greater than 3% after cluseting")
 
 
 
