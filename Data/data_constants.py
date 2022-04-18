@@ -1,2 +1,2 @@
 BUCKET_NAME = 'covid-ct-dataset'
-DATA_FOLDER = 'CovidDataSet'
+DATA_FOLDER = 'Data/CovidDataSet'
