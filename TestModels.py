@@ -10,6 +10,7 @@ import tensorflow as tf
 from tensorflow.keras import datasets, losses
 from tensorflow.keras.optimizers import Adam, SGD
 from tensorflow.keras import layers
+from Utils import evaluate_tflite_file
 
 
 #---Constants for AlexNet Tests----#
@@ -30,7 +31,7 @@ RES20_FILE = 'res20.h5'
 # ---Constants for Compression Tests-----#
 SKIP_CLUSTER_TESTS = True
 SKIP_PRUNE_TESTS = True
-SKIP_QUNATIZE_TESTS = False
+SKIP_QUNATIZE_TESTS = True
 
 #-----------------------------------#
 
@@ -308,6 +309,9 @@ class TestCompression(unittest.TestCase):
         decrease_in_acc = prev_acc-new_acc
 
         self.assertLess(decrease_in_acc,3,"Accuracy decreased by greater than 3% after cluseting")
+
+    # def test_tflite(self):
+    #     evaluate_tflite_file('resnet20.tflite', self.x_test, self.y_test)
 
 
 
