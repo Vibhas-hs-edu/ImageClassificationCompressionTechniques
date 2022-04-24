@@ -1,2 +1,10 @@
 #Ignore modules
 node_modules/
+
+# Ignore Sachin's local test files
+*.log
+resnet20/
+
+#Ignore model files
+*.h5
+*.tflite 
