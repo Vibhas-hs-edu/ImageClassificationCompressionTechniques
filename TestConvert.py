@@ -19,8 +19,9 @@ class ConvertToJs(unittest.TestCase):
 
         convert = Convert(model)
 
-        convert.to_tfjs('Models')
+        convert.to_tfjs('JS/model')
     
+    @unittest.skip
     def test2(self):
         evaluate_tflite_file('resnet20.tflite')
 
