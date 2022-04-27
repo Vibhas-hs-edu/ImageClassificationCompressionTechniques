@@ -2,6 +2,7 @@
 # Code for resnet_layer and resnet_v1 come from the following link: 
 # https://keras.io/zh/examples/cifar10_resnet/
 
+from lib2to3.pytree import Base
 import keras
 import tensorflow as tf
 import keras
@@ -17,9 +18,10 @@ from keras.models import Model
 from keras.datasets import cifar10
 import numpy as np
 import os
+from Models.base_model import BaseModel
 
-class ResNet:
-    def __init__(self, input_shape, depth, num_classes=10) -> None:
+class ResNet(BaseModel):
+    def __init__(self, input_shape, depth, num_classes=10, save_dir = 'ResNet', model_name = 'base') -> None:
         """
         Class to abstract away implementation of ResNet. Supports ResNet-{6n+2} 
         as well as ResNet101
@@ -31,6 +33,7 @@ class ResNet:
         num_classes (int) : number of classes in the data 
         """
 
+        super().__init__(model_name, save_dir)
         # TODO implement logic
         depth_valid = depth == 101 or (depth-2)%6 ==0
 

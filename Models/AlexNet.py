@@ -5,9 +5,10 @@
 import tensorflow as tf
 import keras
 from tensorflow.keras import datasets, layers, models, losses
+from Models.base_model import BaseModel
 
-class AlexNet:
-    def __init__(self, input_shape, num_classes) -> None:
+class AlexNet(BaseModel):
+    def __init__(self, input_shape, num_classes, save_dir = 'AlexNet', model_name = 'base') -> None:
         """
         Class to abstract away implementation of AlexNet
 
@@ -23,8 +24,8 @@ class AlexNet:
         Attributes:
         --------------
         model: the AlexNet model
-
         """
+        super().__init__(model_name, save_dir)
         model = keras.models.Sequential()
         model.add(layers.experimental.preprocessing.Resizing(224, 224, interpolation="bilinear", input_shape=input_shape))
         model.add(layers.Conv2D(96, 11, strides=4, padding='same'))
