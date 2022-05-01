@@ -12,7 +12,7 @@ This project is used for COMS 6998 Deep learning practical sys class. The owners
 
     a)kaggle datasets download -d hgunraj/covidxc
     
-#Project Setup
+# Project Setup
 
 1) create a directory called as project in the root folder.
 2) Clone "ImageClassificationCompressionTechniques" into the project folder.
