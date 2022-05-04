@@ -29,7 +29,7 @@ class Prune:
 
         self.model = trained_model
     
-    def prune(self,train_images, train_labels,batch_size=128,fine_tune_epochs=2, final_sparsity=0.8):
+    def prune(self,train_images, train_labels,batch_size=128,fine_tune_epochs=1, final_sparsity=0.8):
 
         """
         Prunes the network to the specified sparsity
@@ -69,7 +69,11 @@ class Prune:
 
         model_for_pruning.fit(train_images,train_labels,batch_size=batch_size,epochs=fine_tune_epochs,callbacks=callbacks)
 
-        self.model = model_for_pruning
+        self.model = tfmot.sparsity.keras.strip_pruning(model_for_pruning)
+
+        self.model.compile(optimizer='adam',
+              loss='categorical_crossentropy',
+              metrics=['accuracy'])
         
 
         
@@ -107,7 +111,7 @@ class Cluster:
         """
         self.clustering_flag = False #Set to true after clustering is performed
 
-    def cluster(self, num_clusters):
+    def cluster(self, num_clusters=16):
         """
         Performs clustering/weight sharing on the pre-trained model
 
