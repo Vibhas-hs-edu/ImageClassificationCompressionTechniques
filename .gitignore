@@ -8,3 +8,7 @@ resnet20/
 #Ignore model files
 *.h5
 *.tflite 
+
+#Ignore pycache
+__pycache__
+*.pyc
