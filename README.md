@@ -20,4 +20,5 @@ This project is used for COMS 6998 Deep learning practical sys class. The owners
     - mkdir project/ImageClassificationCompressionTechniques/Data/CovidDataSet
     - mv 2A_images/ project/ImageClassificationCompressionTechniques/Data/CovidDataSet
     - mv metadata.csv project/ImageClassificationCompressionTechniques/Data/CovidDataSet
+    - mv *.txt project/ImageClassificationCompressionTechniques/Data/CovidDataSet
 
