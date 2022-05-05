@@ -12,9 +12,9 @@ save_dir = 'ResNet50'
 
 resnet_model = ResNet(input_shape = input_shape, depth = depth, num_classes = num_classes, save_dir = save_dir, model_name = "ResNet50")
 
-train_generator = get_generator("Train", input_shape)
-val_generator = get_generator("Val", input_shape)
-test_generator = get_generator("Test", input_shape)
+train_generator = get_generator("Train", input_shape, batch_size = 8)
+val_generator = get_generator("Val", input_shape, batch_size = 8)
+test_generator = get_generator("Test", input_shape, batch_size = 8)
 
 loss_fn = tf.keras.losses.SparseCategoricalCrossentropy(from_logits = False)
 
