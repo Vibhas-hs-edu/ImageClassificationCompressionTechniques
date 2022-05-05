@@ -7,10 +7,10 @@ import logging
 
 input_shape = (512, 512, 3)
 num_classes = 3
-depth = 20
+depth = 50
+save_dir = 'ResNet50'
 
-resnet_model = ResNet(input_shape = input_shape, depth = 20, num_classes = num_classes)
-alexnet_model = AlexNet(input_shape = input_shape, num_classes = num_classes)
+resnet_model = ResNet(input_shape = input_shape, depth = depth, num_classes = num_classes)
 
 train_generator = get_generator("Train", input_shape)
 val_generator = get_generator("Val", input_shape)
@@ -18,4 +18,4 @@ test_generator = get_generator("Test", input_shape)
 
 loss_fn = tf.keras.losses.SparseCategoricalCrossentropy(from_logits = False)
 
-train_model(train_dataset = train_generator, val_dataset = val_generator, model = resnet_model, loss_fn = loss_fn, filename = "ResNetLogs.txt")
+train_model(train_dataset = train_generator, val_dataset = val_generator, model = resnet_model, loss_fn = loss_fn, filename = f"{save_dir}/ResNetLogs.txt")

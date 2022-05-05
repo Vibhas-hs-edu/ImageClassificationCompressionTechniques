@@ -6,7 +6,7 @@ import numpy as np
 import time
 import logging
 
-DEF_EPOCHS = 100
+DEF_EPOCHS = 10
 DEF_MODEL = None
 DEF_OPTIMIZER = keras.optimizers.SGD(learning_rate=1e-3)
 
@@ -14,7 +14,7 @@ DEF_TRAIN_METRIC = keras.metrics.SparseCategoricalAccuracy()
 DEF_VAL_METRIC = keras.metrics.SparseCategoricalAccuracy()
 
 def train_model(train_dataset, val_dataset, model, loss_fn, epochs = DEF_EPOCHS, optimizer = DEF_OPTIMIZER, train_acc_metric = DEF_TRAIN_METRIC
-                ,val_acc_metric = DEF_VAL_METRIC, filename = 'example.log', save_dir = 'Models'):
+                ,val_acc_metric = DEF_VAL_METRIC, filename = 'example.log'):
 
     logging.basicConfig(filename = filename, level=logging.INFO)
     for epoch in range(epochs):
@@ -33,9 +33,9 @@ def train_model(train_dataset, val_dataset, model, loss_fn, epochs = DEF_EPOCHS,
             train_acc_metric.update_state(true_labels, preds)
 
             # Log every 200 batches.
-            if step % 20 == 0:
+            if step % 200 == 0:
                 logging.info(f"Training loss for one batch at step {step}: {float(loss_value)}")
-                logging.info(f"Seen so far: %d samples f{((step + 1) * len(x_batch_train))}")
+                logging.info(f"Seen so far {((step + 1) * len(x_batch_train))} samples")
 
         # Display metrics at the end of each epoch.
         train_acc = train_acc_metric.result()
@@ -43,7 +43,7 @@ def train_model(train_dataset, val_dataset, model, loss_fn, epochs = DEF_EPOCHS,
 
         # Reset training metrics at the end of each epoch
         train_acc_metric.reset_states()
-        if epoch % 20 == 0:
+        if epoch % 1 == 0:
             model.save_model(model.model, epoch)
 
         # Run a validation loop at the end of each epoch.
@@ -54,4 +54,4 @@ def train_model(train_dataset, val_dataset, model, loss_fn, epochs = DEF_EPOCHS,
         val_acc = val_acc_metric.result()
         val_acc_metric.reset_states()
         logging.info(f"Validation acc: {float(val_acc)}")
-        logging.info(f"Time taken: {time.time() - start_time}")
+        logging.info(f"Time taken for one epoch: {time.time() - start_time}")
