@@ -21,7 +21,7 @@ import os
 from Models.base_model import BaseModel
 
 class ResNet(BaseModel):
-    def __init__(self, input_shape, depth, num_classes=10, save_dir = 'ResNet', model_name = 'base') -> None:
+    def __init__(self, input_shape, depth, num_classes=10, save_dir = 'ResNet', model_name = 'ResNet') -> None:
         """
         Class to abstract away implementation of ResNet. Supports ResNet-{6n+2} 
         as well as ResNet101
