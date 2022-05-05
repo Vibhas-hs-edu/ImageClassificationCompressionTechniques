@@ -3,7 +3,7 @@ import os
 class BaseModel:
     def __init__(self, name, save_dir):
         if not os.path.exists(save_dir):
-            os.mkdir(save_dir)
+            os.makedirs(save_dir)
         self.save_dir = save_dir
         self.name = name
 

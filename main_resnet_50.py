@@ -10,7 +10,7 @@ num_classes = 3
 depth = 50
 save_dir = 'ResNet50'
 
-resnet_model = ResNet(input_shape = input_shape, depth = depth, num_classes = num_classes, model_name = "ResNet50")
+resnet_model = ResNet(input_shape = input_shape, depth = depth, num_classes = num_classes, save_dir = save_dir, model_name = "ResNet50")
 
 train_generator = get_generator("Train", input_shape)
 val_generator = get_generator("Val", input_shape)

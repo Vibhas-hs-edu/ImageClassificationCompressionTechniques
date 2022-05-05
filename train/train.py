@@ -48,7 +48,7 @@ def train_model(train_dataset, val_dataset, model, loss_fn, epochs = DEF_EPOCHS,
 
         # Run a validation loop at the end of each epoch.
         for x_batch_val, y_batch_val in val_dataset:
-            val_preds = model(x_batch_val, training=False)
+            val_preds = model.model(x_batch_val, training=False)
             # Update val metrics
             val_acc_metric.update_state(y_batch_val, val_preds)
         val_acc = val_acc_metric.result()
