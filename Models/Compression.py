@@ -70,10 +70,6 @@ class Prune:
         model_for_pruning.fit(train_images,train_labels,batch_size=batch_size,epochs=fine_tune_epochs,callbacks=callbacks)
 
         self.model = tfmot.sparsity.keras.strip_pruning(model_for_pruning)
-
-        self.model.compile(optimizer='adam',
-              loss='categorical_crossentropy',
-              metrics=['accuracy'])
         
 
         
@@ -154,7 +150,7 @@ class Cluster:
         if not self.clustering_flag:
             raise RuntimeError("Need to cluster the weights before fine tuning can take place. Call Cluster.cluster()")
 
-        opt = tf.keras.optimizers.Adam(learning_rate=1e-5)
+        opt = tf.keras.optimizers.Adam(learning_rate=learning_rate)
 
         self.model.compile(
         loss='categorical_crossentropy',
@@ -163,8 +159,7 @@ class Cluster:
 
         self.history = self.model.fit(x_train,y_train,batch_size=batch_size,epochs=epochs)
 
-
-
+        self.model = tfmot.clustering.keras.strip_clustering(self.model)
 
 
 class Quantize:
