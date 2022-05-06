@@ -72,7 +72,7 @@ class Prune:
         self.model = tfmot.sparsity.keras.strip_pruning(model_for_pruning)
         
 
-    def prune_new(self, train_generator, batch_size=128,fine_tune_epochs=1, final_sparsity=0.8):
+    def prune_generator(self, train_generator, batch_size=128,fine_tune_epochs=1, final_sparsity=0.8):
 
         """
         Prunes the network to the specified sparsity
@@ -113,13 +113,14 @@ class Prune:
         num_classes = 3
 
         for step, (x_batch_train, y_batch_train) in enumerate(train_generator):
-            if step >= 3:
+            if step >= 100:
                 break
             print('Current step', step)
             true_labels, true_bboxes = y_batch_train
             true_labels = tf.keras.utils.to_categorical(true_labels, num_classes)
             print(true_labels.shape)
             model_for_pruning.fit(x_batch_train,true_labels,batch_size=batch_size,epochs=fine_tune_epochs,callbacks=callbacks)
+
 
         self.model = tfmot.sparsity.keras.strip_pruning(model_for_pruning)
 
@@ -209,6 +210,43 @@ class Cluster:
         metrics=['accuracy'])
 
         self.history = self.model.fit(x_train,y_train,batch_size=batch_size,epochs=epochs)
+
+        self.model = tfmot.clustering.keras.strip_clustering(self.model)
+
+    
+    def finetune_generator(self, train_generator, batch_size=256,learning_rate=1e-5,epochs=1):
+        """
+        Performs fine tuning using the given training data. Will only run if you
+        have clustered the model. Uses Adam optimizer
+
+        Parameters:
+        ----------------
+        x_train: the training data
+        y_train: the labels for the training data
+        batch_size: the batch_size
+        learning_rate: the learning rate, keep this low because we are just 
+        finetuninrg
+        epochs: the number of epochs to train for. Keep low for finetuning         
+        """
+
+        if not self.clustering_flag:
+            raise RuntimeError("Need to cluster the weights before fine tuning can take place. Call Cluster.cluster()")
+
+        opt = tf.keras.optimizers.Adam(learning_rate=learning_rate)
+
+        self.model.compile(
+        loss='categorical_crossentropy',
+        optimizer=opt,
+        metrics=['accuracy'])
+
+        num_classes = 3
+
+        for step, (x_batch_train, y_batch_train) in enumerate(train_generator):
+            if step >= 100:
+                break
+            true_labels, true_bboxes = y_batch_train
+            y_train = tf.keras.utils.to_categorical(true_labels, num_classes)
+            self.history = self.model.fit(x_batch_train, y_train,batch_size=batch_size,epochs=epochs)
 
         self.model = tfmot.clustering.keras.strip_clustering(self.model)
 

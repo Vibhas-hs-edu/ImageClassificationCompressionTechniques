@@ -15,7 +15,7 @@ def prune_and_save_model(uncompressed_model_file, pruned_model_name, save_path, 
         os.makedirs(Path(save_path).parent)
 
     r_comp= ResNetPruned(input_shape = input_shape, depth = depth, num_classes = num_classes, model_name = pruned_model_name)
-    r_comp.load_model(model_file = uncompressed_model_file, batch_size = batch_size)
+    r_comp.load_and_prepare_model(model_file = uncompressed_model_file, batch_size = batch_size)
     pruned_model = r_comp.model_pruned
     pruned_model.save(save_path)
 
