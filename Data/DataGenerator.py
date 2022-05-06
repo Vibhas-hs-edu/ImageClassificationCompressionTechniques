@@ -17,6 +17,8 @@ class DataGenerator(tf.keras.utils.Sequence):
         input_size : Shape of the image
         """
         self.df = df.copy()
+        if shuffle:
+            self.df = self.df.sample(frac=1).reset_index(drop=True)
         self.X_col = X_col
         self.y_col = y_col
         self.batch_size = batch_size
