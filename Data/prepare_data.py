@@ -29,7 +29,6 @@ val_ds['filename'] =  val_ds['filename'].apply(lambda x: os.path.join(images_fol
 test_ds['filename'] =  test_ds['filename'].apply(lambda x: os.path.join(images_folder, x))
 
 def get_generator(generator_type, input_size, batch_size = 32):
-    batch_size = 64
     x_map = {'path':'filename'}
     y_map = {'class': 'class', 'xmin': 'xmin', 'ymin' : 'ymin', 'xmax' : 'xmax', 'ymax' : 'ymax'}
     if generator_type == "Train":

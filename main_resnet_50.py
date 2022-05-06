@@ -1,4 +1,3 @@
-from numpy import save
 from train.train import train_model
 from Data.prepare_data import get_generator
 from Models.AlexNet import AlexNet
@@ -8,15 +7,14 @@ import logging
 
 input_shape = (512, 512, 3)
 num_classes = 3
-depth = 20
-save_dir = 'ResNet18'
+depth = 50
+save_dir = 'ResNet50'
 
-resnet_model = ResNet(input_shape = input_shape, depth = 20, save_dir = save_dir, num_classes = num_classes)
-alexnet_model = AlexNet(input_shape = input_shape, num_classes = num_classes)
+resnet_model = ResNet(input_shape = input_shape, depth = depth, num_classes = num_classes, save_dir = save_dir, model_name = "ResNet50")
 
-train_generator = get_generator("Train", input_shape, batch_size = 16)
-val_generator = get_generator("Val", input_shape, batch_size = 16)
-test_generator = get_generator("Test", input_shape, batch_size = 16)
+train_generator = get_generator("Train", input_shape, batch_size = 8)
+val_generator = get_generator("Val", input_shape, batch_size = 8)
+test_generator = get_generator("Test", input_shape, batch_size = 8)
 
 loss_fn = tf.keras.losses.SparseCategoricalCrossentropy(from_logits = False)
 
