@@ -23,6 +23,10 @@ class DataGenerator(tf.keras.utils.Sequence):
         self.input_size = input_size
         self.shuffle = shuffle
         self.n = len(self.df)
+
+    def on_epoch_end(self):
+        if self.shuffle:
+            self.df = self.df.sample(frac=1).reset_index(drop=True)
     
     def __len__(self):
         return int(self.n / self.batch_size)
