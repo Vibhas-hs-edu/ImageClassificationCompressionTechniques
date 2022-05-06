@@ -72,6 +72,57 @@ class Prune:
         self.model = tfmot.sparsity.keras.strip_pruning(model_for_pruning)
         
 
+    def prune_new(self, train_generator, batch_size=128,fine_tune_epochs=1, final_sparsity=0.8):
+
+        """
+        Prunes the network to the specified sparsity
+
+        Params:
+        --------
+
+        train_images: images to train on
+
+        train_labels: one-hot label vectors
+
+        final_sparsity: the final sparsity we want to achieve for the network, 
+        i.e., what percent of the connections do we want pruned
+        """
+
+
+        prune_low_magnitude = tfmot.sparsity.keras.prune_low_magnitude
+
+
+        end_step = np.ceil(len(train_generator)).astype(np.int32) * fine_tune_epochs
+
+        # Define model for pruning.
+        pruning_params = {
+            'pruning_schedule': tfmot.sparsity.keras.PolynomialDecay(initial_sparsity=0.50,
+                                                                    final_sparsity=final_sparsity,
+                                                                    begin_step=0,
+                                                                    end_step=end_step)
+        }
+
+        model_for_pruning = prune_low_magnitude(self.model, **pruning_params)
+
+        model_for_pruning.compile(optimizer='adam',
+              loss='categorical_crossentropy',
+              metrics=['accuracy'])
+
+        callbacks = [tfmot.sparsity.keras.UpdatePruningStep()]
+        
+        num_classes = 3
+
+        for step, (x_batch_train, y_batch_train) in enumerate(train_generator):
+            if step >= 3:
+                break
+            print('Current step', step)
+            true_labels, true_bboxes = y_batch_train
+            true_labels = tf.keras.utils.to_categorical(true_labels, num_classes)
+            print(true_labels.shape)
+            model_for_pruning.fit(x_batch_train,true_labels,batch_size=batch_size,epochs=fine_tune_epochs,callbacks=callbacks)
+
+        self.model = tfmot.sparsity.keras.strip_pruning(model_for_pruning)
+
         
 
 class Cluster:

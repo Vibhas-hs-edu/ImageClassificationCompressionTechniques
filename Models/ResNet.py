@@ -2,7 +2,6 @@
 # Code for resnet_layer and resnet_v1 come from the following link: 
 # https://keras.io/zh/examples/cifar10_resnet/
 
-from lib2to3.pytree import Base
 import keras
 import tensorflow as tf
 import keras

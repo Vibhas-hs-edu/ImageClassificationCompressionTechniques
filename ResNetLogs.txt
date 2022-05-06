@@ -1,0 +1,3 @@
+INFO:root:Start of epoch 0
+INFO:root:Training loss for one batch at step 0: 4.903566360473633
+INFO:root:Seen so far: %d samples 64
