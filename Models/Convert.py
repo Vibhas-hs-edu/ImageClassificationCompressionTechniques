@@ -6,6 +6,7 @@ Abstracts away conversion methods for:
 import tensorflowjs as tfjs
 import tensorflow as tf
 
+
 class Convert:
     def __init__(self, trained_model) -> None:
         self.model = trained_model
@@ -40,6 +41,8 @@ class Convert:
             converter.optimizations = [tf.lite.Optimize.DEFAULT]
 
             quantized_tflite_model = converter.convert()
+
+
 
             filename_with_extension = filename+'.tflite'
 
