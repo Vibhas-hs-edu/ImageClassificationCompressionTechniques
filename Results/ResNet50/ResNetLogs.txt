@@ -780,3 +780,1094 @@ INFO:root:Training loss for one batch at step 1400: 0.0038960748352110386
 INFO:root:Seen so far 11208 samples
 INFO:root:Training loss for one batch at step 1600: 0.007357020862400532
 INFO:root:Seen so far 12808 samples
+INFO:root:Training loss for one batch at step 1800: 0.00013811234384775162
+INFO:root:Seen so far 14408 samples
+INFO:root:Training loss for one batch at step 2000: 0.003435977967455983
+INFO:root:Seen so far 16008 samples
+INFO:root:Training loss for one batch at step 2200: 0.00017712426779326051
+INFO:root:Seen so far 17608 samples
+INFO:root:Training loss for one batch at step 2400: 0.004965123254805803
+INFO:root:Seen so far 19208 samples
+INFO:root:Training loss for one batch at step 2600: 0.0006445117760449648
+INFO:root:Seen so far 20808 samples
+INFO:root:Training loss for one batch at step 2800: 0.0021756200585514307
+INFO:root:Seen so far 22408 samples
+INFO:root:Training loss for one batch at step 3000: 0.0009388177422806621
+INFO:root:Seen so far 24008 samples
+INFO:root:Training loss for one batch at step 3200: 0.011107063852250576
+INFO:root:Seen so far 25608 samples
+INFO:root:Training loss for one batch at step 3400: 0.020754216238856316
+INFO:root:Seen so far 27208 samples
+INFO:root:Training loss for one batch at step 3600: 0.0028533071745187044
+INFO:root:Seen so far 28808 samples
+INFO:root:Training loss for one batch at step 3800: 0.0002447346050757915
+INFO:root:Seen so far 30408 samples
+INFO:root:Training loss for one batch at step 4000: 0.001326138386502862
+INFO:root:Seen so far 32008 samples
+INFO:root:Training loss for one batch at step 4200: 0.00016342502203769982
+INFO:root:Seen so far 33608 samples
+INFO:root:Training loss for one batch at step 4400: 0.0030308798886835575
+INFO:root:Seen so far 35208 samples
+INFO:root:Training loss for one batch at step 4600: 0.006803187076002359
+INFO:root:Seen so far 36808 samples
+INFO:root:Training loss for one batch at step 4800: 0.0009426582837477326
+INFO:root:Seen so far 38408 samples
+INFO:root:Training loss for one batch at step 5000: 0.00012012899969704449
+INFO:root:Seen so far 40008 samples
+INFO:root:Training loss for one batch at step 5200: 0.009443886578083038
+INFO:root:Seen so far 41608 samples
+INFO:root:Training loss for one batch at step 5400: 0.015906354412436485
+INFO:root:Seen so far 43208 samples
+INFO:root:Training loss for one batch at step 5600: 0.009888801723718643
+INFO:root:Seen so far 44808 samples
+INFO:root:Training loss for one batch at step 5800: 0.0008269913960248232
+INFO:root:Seen so far 46408 samples
+INFO:root:Training loss for one batch at step 6000: 0.002815662184730172
+INFO:root:Seen so far 48008 samples
+INFO:root:Training loss for one batch at step 6200: 0.04818030819296837
+INFO:root:Seen so far 49608 samples
+INFO:root:Training loss for one batch at step 6400: 0.0003979093744419515
+INFO:root:Seen so far 51208 samples
+INFO:root:Training loss for one batch at step 6600: 0.000844721042085439
+INFO:root:Seen so far 52808 samples
+INFO:root:Training loss for one batch at step 6800: 0.0023867434356361628
+INFO:root:Seen so far 54408 samples
+INFO:root:Training loss for one batch at step 7000: 4.815266947844066e-05
+INFO:root:Seen so far 56008 samples
+INFO:root:Training loss for one batch at step 7200: 0.0006380159175023437
+INFO:root:Seen so far 57608 samples
+INFO:root:Training loss for one batch at step 7400: 0.00011485264985822141
+INFO:root:Seen so far 59208 samples
+INFO:root:Training loss for one batch at step 7600: 0.003091526450589299
+INFO:root:Seen so far 60808 samples
+INFO:root:Training loss for one batch at step 7800: 0.000868182978592813
+INFO:root:Seen so far 62408 samples
+INFO:root:Training loss for one batch at step 8000: 0.004008712247014046
+INFO:root:Seen so far 64008 samples
+INFO:root:Training loss for one batch at step 8200: 0.05875636637210846
+INFO:root:Seen so far 65608 samples
+INFO:root:Training loss for one batch at step 8400: 0.0042535364627838135
+INFO:root:Seen so far 67208 samples
+INFO:root:Training loss for one batch at step 8600: 0.00039426994044333696
+INFO:root:Seen so far 68808 samples
+INFO:root:Training loss for one batch at step 8800: 0.026945503428578377
+INFO:root:Seen so far 70408 samples
+INFO:root:Training loss for one batch at step 9000: 3.783014108194038e-05
+INFO:root:Seen so far 72008 samples
+INFO:root:Training loss for one batch at step 9200: 0.0007940168725326657
+INFO:root:Seen so far 73608 samples
+INFO:root:Training loss for one batch at step 9400: 0.539730966091156
+INFO:root:Seen so far 75208 samples
+INFO:root:Training loss for one batch at step 9600: 0.0016821058234199882
+INFO:root:Seen so far 76808 samples
+INFO:root:Training loss for one batch at step 9800: 0.0007133737090043724
+INFO:root:Seen so far 78408 samples
+INFO:root:Training loss for one batch at step 10000: 6.249972648220137e-05
+INFO:root:Seen so far 80008 samples
+INFO:root:Training loss for one batch at step 10200: 0.01699185185134411
+INFO:root:Seen so far 81608 samples
+INFO:root:Training loss for one batch at step 10400: 9.670548752183095e-05
+INFO:root:Seen so far 83208 samples
+INFO:root:Training loss for one batch at step 10600: 0.005832523573189974
+INFO:root:Seen so far 84808 samples
+INFO:root:Training loss for one batch at step 10800: 0.0001801333564799279
+INFO:root:Seen so far 86408 samples
+INFO:root:Training loss for one batch at step 11000: 0.006747884210199118
+INFO:root:Seen so far 88008 samples
+INFO:root:Training loss for one batch at step 11200: 0.02947751060128212
+INFO:root:Seen so far 89608 samples
+INFO:root:Training loss for one batch at step 11400: 0.013760771602392197
+INFO:root:Seen so far 91208 samples
+INFO:root:Training loss for one batch at step 11600: 0.00028320634737610817
+INFO:root:Seen so far 92808 samples
+INFO:root:Training loss for one batch at step 11800: 4.018515392090194e-05
+INFO:root:Seen so far 94408 samples
+INFO:root:Training loss for one batch at step 12000: 0.006453896872699261
+INFO:root:Seen so far 96008 samples
+INFO:root:Training loss for one batch at step 12200: 0.001391348778270185
+INFO:root:Seen so far 97608 samples
+INFO:root:Training loss for one batch at step 12400: 0.029404152184724808
+INFO:root:Seen so far 99208 samples
+INFO:root:Training loss for one batch at step 12600: 0.0011271489784121513
+INFO:root:Seen so far 100808 samples
+INFO:root:Training loss for one batch at step 12800: 0.00916649866849184
+INFO:root:Seen so far 102408 samples
+INFO:root:Training loss for one batch at step 13000: 0.10110382735729218
+INFO:root:Seen so far 104008 samples
+INFO:root:Training loss for one batch at step 13200: 0.00024564572959207
+INFO:root:Seen so far 105608 samples
+INFO:root:Training loss for one batch at step 13400: 0.0008849002188071609
+INFO:root:Seen so far 107208 samples
+INFO:root:Training loss for one batch at step 13600: 0.09345681965351105
+INFO:root:Seen so far 108808 samples
+INFO:root:Training loss for one batch at step 13800: 0.008745236322283745
+INFO:root:Seen so far 110408 samples
+INFO:root:Training loss for one batch at step 14000: 0.00098977773450315
+INFO:root:Seen so far 112008 samples
+INFO:root:Training loss for one batch at step 14200: 0.06465519964694977
+INFO:root:Seen so far 113608 samples
+INFO:root:Training loss for one batch at step 14400: 0.0023052524775266647
+INFO:root:Seen so far 115208 samples
+INFO:root:Training loss for one batch at step 14600: 0.0010988637804985046
+INFO:root:Seen so far 116808 samples
+INFO:root:Training loss for one batch at step 14800: 0.0003942782641388476
+INFO:root:Seen so far 118408 samples
+INFO:root:Training loss for one batch at step 15000: 0.006847599055618048
+INFO:root:Seen so far 120008 samples
+INFO:root:Training loss for one batch at step 15200: 0.0006604873924516141
+INFO:root:Seen so far 121608 samples
+INFO:root:Training loss for one batch at step 15400: 0.0016178857767954469
+INFO:root:Seen so far 123208 samples
+INFO:root:Training loss for one batch at step 15600: 5.00287460454274e-05
+INFO:root:Seen so far 124808 samples
+INFO:root:Training loss for one batch at step 15800: 0.003929919097572565
+INFO:root:Seen so far 126408 samples
+INFO:root:Training loss for one batch at step 16000: 0.004963232669979334
+INFO:root:Seen so far 128008 samples
+INFO:root:Training loss for one batch at step 16200: 0.0004862557107117027
+INFO:root:Seen so far 129608 samples
+INFO:root:Training loss for one batch at step 16400: 0.00041899748612195253
+INFO:root:Seen so far 131208 samples
+INFO:root:Training loss for one batch at step 16600: 0.001367002259939909
+INFO:root:Seen so far 132808 samples
+INFO:root:Training loss for one batch at step 16800: 0.014297227375209332
+INFO:root:Seen so far 134408 samples
+INFO:root:Training loss for one batch at step 17000: 0.005500413943082094
+INFO:root:Seen so far 136008 samples
+INFO:root:Training loss for one batch at step 17200: 0.001152664190158248
+INFO:root:Seen so far 137608 samples
+INFO:root:Training loss for one batch at step 17400: 0.0006387938046827912
+INFO:root:Seen so far 139208 samples
+INFO:root:Training loss for one batch at step 17600: 2.1159553398319986e-06
+INFO:root:Seen so far 140808 samples
+INFO:root:Training loss for one batch at step 17800: 0.013292063027620316
+INFO:root:Seen so far 142408 samples
+INFO:root:Training acc over epoch: 0.9939419627189636
+WARNING:tensorflow:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+INFO:root:Validation acc: 0.9313971996307373
+INFO:root:Time taken for one epoch: 10621.373661994934
+INFO:root:Start of epoch 5
+INFO:root:Training loss for one batch at step 0: 0.0006475887494161725
+INFO:root:Seen so far 8 samples
+INFO:root:Training loss for one batch at step 200: 0.012430472299456596
+INFO:root:Seen so far 1608 samples
+INFO:root:Training loss for one batch at step 400: 0.000647357723210007
+INFO:root:Seen so far 3208 samples
+INFO:root:Training loss for one batch at step 600: 0.01713348738849163
+INFO:root:Seen so far 4808 samples
+INFO:root:Training loss for one batch at step 800: 0.0011933570494875312
+INFO:root:Seen so far 6408 samples
+INFO:root:Training loss for one batch at step 1000: 0.06325825303792953
+INFO:root:Seen so far 8008 samples
+INFO:root:Training loss for one batch at step 1200: 1.7329681213595904e-05
+INFO:root:Seen so far 9608 samples
+INFO:root:Training loss for one batch at step 1400: 0.004253714811056852
+INFO:root:Seen so far 11208 samples
+INFO:root:Training loss for one batch at step 1600: 0.011135431937873363
+INFO:root:Seen so far 12808 samples
+INFO:root:Training loss for one batch at step 1800: 0.00013723524170927703
+INFO:root:Seen so far 14408 samples
+INFO:root:Training loss for one batch at step 2000: 0.006065725348889828
+INFO:root:Seen so far 16008 samples
+INFO:root:Training loss for one batch at step 2200: 3.364232543390244e-05
+INFO:root:Seen so far 17608 samples
+INFO:root:Training loss for one batch at step 2400: 0.003659399226307869
+INFO:root:Seen so far 19208 samples
+INFO:root:Training loss for one batch at step 2600: 0.002296778839081526
+INFO:root:Seen so far 20808 samples
+INFO:root:Training loss for one batch at step 2800: 0.0016003677155822515
+INFO:root:Seen so far 22408 samples
+INFO:root:Training loss for one batch at step 3000: 0.00033704773522913456
+INFO:root:Seen so far 24008 samples
+INFO:root:Training loss for one batch at step 3200: 0.0022575650364160538
+INFO:root:Seen so far 25608 samples
+INFO:root:Training loss for one batch at step 3400: 0.028019389137625694
+INFO:root:Seen so far 27208 samples
+INFO:root:Training loss for one batch at step 3600: 0.0025620353408157825
+INFO:root:Seen so far 28808 samples
+INFO:root:Training loss for one batch at step 3800: 8.32647638162598e-05
+INFO:root:Seen so far 30408 samples
+INFO:root:Training loss for one batch at step 4000: 0.0007643889402970672
+INFO:root:Seen so far 32008 samples
+INFO:root:Training loss for one batch at step 4200: 0.00018252295558340847
+INFO:root:Seen so far 33608 samples
+INFO:root:Training loss for one batch at step 4400: 0.0003649613063316792
+INFO:root:Seen so far 35208 samples
+INFO:root:Training loss for one batch at step 4600: 0.0024605472572147846
+INFO:root:Seen so far 36808 samples
+INFO:root:Training loss for one batch at step 4800: 0.0013500145869329572
+INFO:root:Seen so far 38408 samples
+INFO:root:Training loss for one batch at step 5000: 4.508363417699002e-05
+INFO:root:Seen so far 40008 samples
+INFO:root:Training loss for one batch at step 5200: 0.005914316046983004
+INFO:root:Seen so far 41608 samples
+INFO:root:Training loss for one batch at step 5400: 0.01720067486166954
+INFO:root:Seen so far 43208 samples
+INFO:root:Training loss for one batch at step 5600: 0.0074376193806529045
+INFO:root:Seen so far 44808 samples
+INFO:root:Training loss for one batch at step 5800: 0.00020142074208706617
+INFO:root:Seen so far 46408 samples
+INFO:root:Training loss for one batch at step 6000: 0.0018080291338264942
+INFO:root:Seen so far 48008 samples
+INFO:root:Training loss for one batch at step 6200: 0.03913707286119461
+INFO:root:Seen so far 49608 samples
+INFO:root:Training loss for one batch at step 6400: 3.7936279113637283e-05
+INFO:root:Seen so far 51208 samples
+INFO:root:Training loss for one batch at step 6600: 8.999973215395585e-05
+INFO:root:Seen so far 52808 samples
+INFO:root:Training loss for one batch at step 6800: 0.0003323455457575619
+INFO:root:Seen so far 54408 samples
+INFO:root:Training loss for one batch at step 7000: 4.6006800403119996e-05
+INFO:root:Seen so far 56008 samples
+INFO:root:Training loss for one batch at step 7200: 0.0006248715217225254
+INFO:root:Seen so far 57608 samples
+INFO:root:Training loss for one batch at step 7400: 0.00015984366473276168
+INFO:root:Seen so far 59208 samples
+INFO:root:Training loss for one batch at step 7600: 0.0006890888325870037
+INFO:root:Seen so far 60808 samples
+INFO:root:Training loss for one batch at step 7800: 0.0013511445140466094
+INFO:root:Seen so far 62408 samples
+INFO:root:Training loss for one batch at step 8000: 0.03088448941707611
+INFO:root:Seen so far 64008 samples
+INFO:root:Training loss for one batch at step 8200: 0.2148832380771637
+INFO:root:Seen so far 65608 samples
+INFO:root:Training loss for one batch at step 8400: 0.0010734922252595425
+INFO:root:Seen so far 67208 samples
+INFO:root:Training loss for one batch at step 8600: 0.0001878400071291253
+INFO:root:Seen so far 68808 samples
+INFO:root:Training loss for one batch at step 8800: 0.06913621723651886
+INFO:root:Seen so far 70408 samples
+INFO:root:Training loss for one batch at step 9000: 2.568806303315796e-05
+INFO:root:Seen so far 72008 samples
+INFO:root:Training loss for one batch at step 9200: 0.000843194080516696
+INFO:root:Seen so far 73608 samples
+INFO:root:Training loss for one batch at step 9400: 0.2546779215335846
+INFO:root:Seen so far 75208 samples
+INFO:root:Training loss for one batch at step 9600: 0.000689502980094403
+INFO:root:Seen so far 76808 samples
+INFO:root:Training loss for one batch at step 9800: 0.0005346213583834469
+INFO:root:Seen so far 78408 samples
+INFO:root:Training loss for one batch at step 10000: 2.0637256966438144e-05
+INFO:root:Seen so far 80008 samples
+INFO:root:Training loss for one batch at step 10200: 0.013891349546611309
+INFO:root:Seen so far 81608 samples
+INFO:root:Training loss for one batch at step 10400: 9.387704835717159e-07
+INFO:root:Seen so far 83208 samples
+INFO:root:Training loss for one batch at step 10600: 0.001450024894438684
+INFO:root:Seen so far 84808 samples
+INFO:root:Training loss for one batch at step 10800: 1.1488636118883733e-05
+INFO:root:Seen so far 86408 samples
+INFO:root:Training loss for one batch at step 11000: 0.006033764686435461
+INFO:root:Seen so far 88008 samples
+INFO:root:Training loss for one batch at step 11200: 0.02118302881717682
+INFO:root:Seen so far 89608 samples
+INFO:root:Training loss for one batch at step 11400: 0.04419850558042526
+INFO:root:Seen so far 91208 samples
+INFO:root:Training loss for one batch at step 11600: 0.00016925254021771252
+INFO:root:Seen so far 92808 samples
+INFO:root:Training loss for one batch at step 11800: 2.342293919355143e-05
+INFO:root:Seen so far 94408 samples
+INFO:root:Training loss for one batch at step 12000: 0.0007468796102330089
+INFO:root:Seen so far 96008 samples
+INFO:root:Training loss for one batch at step 12200: 0.0004431666457094252
+INFO:root:Seen so far 97608 samples
+INFO:root:Training loss for one batch at step 12400: 0.021440181881189346
+INFO:root:Seen so far 99208 samples
+INFO:root:Training loss for one batch at step 12600: 0.000315013196086511
+INFO:root:Seen so far 100808 samples
+INFO:root:Training loss for one batch at step 12800: 0.010848650708794594
+INFO:root:Seen so far 102408 samples
+INFO:root:Training loss for one batch at step 13000: 0.1683170348405838
+INFO:root:Seen so far 104008 samples
+INFO:root:Training loss for one batch at step 13200: 7.003138307482004e-05
+INFO:root:Seen so far 105608 samples
+INFO:root:Training loss for one batch at step 13400: 8.796120528131723e-05
+INFO:root:Seen so far 107208 samples
+INFO:root:Training loss for one batch at step 13600: 0.04866434261202812
+INFO:root:Seen so far 108808 samples
+INFO:root:Training loss for one batch at step 13800: 0.0009533634874969721
+INFO:root:Seen so far 110408 samples
+INFO:root:Training loss for one batch at step 14000: 6.321113323792815e-05
+INFO:root:Seen so far 112008 samples
+INFO:root:Training loss for one batch at step 14200: 0.022258246317505836
+INFO:root:Seen so far 113608 samples
+INFO:root:Training loss for one batch at step 14400: 0.0011955861700698733
+INFO:root:Seen so far 115208 samples
+INFO:root:Training loss for one batch at step 14600: 0.0003480885934550315
+INFO:root:Seen so far 116808 samples
+INFO:root:Training loss for one batch at step 14800: 0.00013573055912274867
+INFO:root:Seen so far 118408 samples
+INFO:root:Training loss for one batch at step 15000: 0.0020225176122039557
+INFO:root:Seen so far 120008 samples
+INFO:root:Training loss for one batch at step 15200: 0.0001545526465633884
+INFO:root:Seen so far 121608 samples
+INFO:root:Training loss for one batch at step 15400: 0.00014525160077027977
+INFO:root:Seen so far 123208 samples
+INFO:root:Training loss for one batch at step 15600: 0.00014032171748112887
+INFO:root:Seen so far 124808 samples
+INFO:root:Training loss for one batch at step 15800: 0.0015295455232262611
+INFO:root:Seen so far 126408 samples
+INFO:root:Training loss for one batch at step 16000: 0.0028869237285107374
+INFO:root:Seen so far 128008 samples
+INFO:root:Training loss for one batch at step 16200: 5.310403139446862e-05
+INFO:root:Seen so far 129608 samples
+INFO:root:Training loss for one batch at step 16400: 0.00011069831816712394
+INFO:root:Seen so far 131208 samples
+INFO:root:Training loss for one batch at step 16600: 0.0010300205321982503
+INFO:root:Seen so far 132808 samples
+INFO:root:Training loss for one batch at step 16800: 0.02984010800719261
+INFO:root:Seen so far 134408 samples
+INFO:root:Training loss for one batch at step 17000: 0.018543098121881485
+INFO:root:Seen so far 136008 samples
+INFO:root:Training loss for one batch at step 17200: 0.0006216946057975292
+INFO:root:Seen so far 137608 samples
+INFO:root:Training loss for one batch at step 17400: 0.0003399207489565015
+INFO:root:Seen so far 139208 samples
+INFO:root:Training loss for one batch at step 17600: 2.9802296808156825e-07
+INFO:root:Seen so far 140808 samples
+INFO:root:Training loss for one batch at step 17800: 0.009053847752511501
+INFO:root:Seen so far 142408 samples
+INFO:root:Training acc over epoch: 0.9957503080368042
+WARNING:tensorflow:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+INFO:root:Validation acc: 0.9241365790367126
+INFO:root:Time taken for one epoch: 9525.37359571457
+INFO:root:Start of epoch 6
+INFO:root:Training loss for one batch at step 0: 0.0004540980444289744
+INFO:root:Seen so far 8 samples
+INFO:root:Training loss for one batch at step 200: 0.0024394690990448
+INFO:root:Seen so far 1608 samples
+INFO:root:Training loss for one batch at step 400: 0.0003116222796961665
+INFO:root:Seen so far 3208 samples
+INFO:root:Training loss for one batch at step 600: 0.011422819457948208
+INFO:root:Seen so far 4808 samples
+INFO:root:Training loss for one batch at step 800: 0.0007083996315486729
+INFO:root:Seen so far 6408 samples
+INFO:root:Training loss for one batch at step 1000: 0.06500949710607529
+INFO:root:Seen so far 8008 samples
+INFO:root:Training loss for one batch at step 1200: 7.301483492483385e-06
+INFO:root:Seen so far 9608 samples
+INFO:root:Training loss for one batch at step 1400: 0.0015924896579235792
+INFO:root:Seen so far 11208 samples
+INFO:root:Training loss for one batch at step 1600: 0.007060918025672436
+INFO:root:Seen so far 12808 samples
+INFO:root:Training loss for one batch at step 1800: 1.7373620721627958e-05
+INFO:root:Seen so far 14408 samples
+INFO:root:Training loss for one batch at step 2000: 0.008145597763359547
+INFO:root:Seen so far 16008 samples
+INFO:root:Training loss for one batch at step 2200: 1.5795142189745093e-06
+INFO:root:Seen so far 17608 samples
+INFO:root:Training loss for one batch at step 2400: 0.0032002744264900684
+INFO:root:Seen so far 19208 samples
+INFO:root:Training loss for one batch at step 2600: 0.0053548929281532764
+INFO:root:Seen so far 20808 samples
+INFO:root:Training loss for one batch at step 2800: 0.0006507927901111543
+INFO:root:Seen so far 22408 samples
+INFO:root:Training loss for one batch at step 3000: 0.00019074141164310277
+INFO:root:Seen so far 24008 samples
+INFO:root:Training loss for one batch at step 3200: 0.000676654395647347
+INFO:root:Seen so far 25608 samples
+INFO:root:Training loss for one batch at step 3400: 0.046554114669561386
+INFO:root:Seen so far 27208 samples
+INFO:root:Training loss for one batch at step 3600: 0.0010099329520016909
+INFO:root:Seen so far 28808 samples
+INFO:root:Training loss for one batch at step 3800: 6.213850429048762e-05
+INFO:root:Seen so far 30408 samples
+INFO:root:Training loss for one batch at step 4000: 0.0002408658037893474
+INFO:root:Seen so far 32008 samples
+INFO:root:Training loss for one batch at step 4200: 1.4543072211381514e-05
+INFO:root:Seen so far 33608 samples
+INFO:root:Training loss for one batch at step 4400: 0.0015954801347106695
+INFO:root:Seen so far 35208 samples
+INFO:root:Training loss for one batch at step 4600: 0.0003821629798039794
+INFO:root:Seen so far 36808 samples
+INFO:root:Training loss for one batch at step 4800: 0.001680048299022019
+INFO:root:Seen so far 38408 samples
+INFO:root:Training loss for one batch at step 5000: 5.1920636906288564e-05
+INFO:root:Seen so far 40008 samples
+INFO:root:Training loss for one batch at step 5200: 0.006818739231675863
+INFO:root:Seen so far 41608 samples
+INFO:root:Training loss for one batch at step 5400: 0.015339802019298077
+INFO:root:Seen so far 43208 samples
+INFO:root:Training loss for one batch at step 5600: 0.002895965473726392
+INFO:root:Seen so far 44808 samples
+INFO:root:Training loss for one batch at step 5800: 8.260492177214473e-05
+INFO:root:Seen so far 46408 samples
+INFO:root:Training loss for one batch at step 6000: 0.003165089525282383
+INFO:root:Seen so far 48008 samples
+INFO:root:Training loss for one batch at step 6200: 0.006579624488949776
+INFO:root:Seen so far 49608 samples
+INFO:root:Training loss for one batch at step 6400: 1.2069917829649057e-06
+INFO:root:Seen so far 51208 samples
+INFO:root:Training loss for one batch at step 6600: 6.586245945072733e-06
+INFO:root:Seen so far 52808 samples
+INFO:root:Training loss for one batch at step 6800: 2.9962648113723844e-05
+INFO:root:Seen so far 54408 samples
+INFO:root:Training loss for one batch at step 7000: 0.00014956736413296312
+INFO:root:Seen so far 56008 samples
+INFO:root:Training loss for one batch at step 7200: 0.00041347023216076195
+INFO:root:Seen so far 57608 samples
+INFO:root:Training loss for one batch at step 7400: 0.00022792851086705923
+INFO:root:Seen so far 59208 samples
+INFO:root:Training loss for one batch at step 7600: 0.001230116467922926
+INFO:root:Seen so far 60808 samples
+INFO:root:Training loss for one batch at step 7800: 0.0007049970445223153
+INFO:root:Seen so far 62408 samples
+INFO:root:Training loss for one batch at step 8000: 0.023284142836928368
+INFO:root:Seen so far 64008 samples
+INFO:root:Training loss for one batch at step 8200: 0.041205842047929764
+INFO:root:Seen so far 65608 samples
+INFO:root:Training loss for one batch at step 8400: 0.0007867695530876517
+INFO:root:Seen so far 67208 samples
+INFO:root:Training loss for one batch at step 8600: 0.0001405616640113294
+INFO:root:Seen so far 68808 samples
+INFO:root:Training loss for one batch at step 8800: 0.05988463759422302
+INFO:root:Seen so far 70408 samples
+INFO:root:Training loss for one batch at step 9000: 4.235914457240142e-05
+INFO:root:Seen so far 72008 samples
+INFO:root:Training loss for one batch at step 9200: 0.000527265714481473
+INFO:root:Seen so far 73608 samples
+INFO:root:Training loss for one batch at step 9400: 0.09731586277484894
+INFO:root:Seen so far 75208 samples
+INFO:root:Training loss for one batch at step 9600: 0.001340633723884821
+INFO:root:Seen so far 76808 samples
+INFO:root:Training loss for one batch at step 9800: 0.00012156197044532746
+INFO:root:Seen so far 78408 samples
+INFO:root:Training loss for one batch at step 10000: 1.8968539734487422e-05
+INFO:root:Seen so far 80008 samples
+INFO:root:Training loss for one batch at step 10200: 0.0025468580424785614
+INFO:root:Seen so far 81608 samples
+INFO:root:Training loss for one batch at step 10400: 6.049731382518075e-06
+INFO:root:Seen so far 83208 samples
+INFO:root:Training loss for one batch at step 10600: 0.006881895009428263
+INFO:root:Seen so far 84808 samples
+INFO:root:Training loss for one batch at step 10800: 3.904084678651998e-06
+INFO:root:Seen so far 86408 samples
+INFO:root:Training loss for one batch at step 11000: 0.0016648597083985806
+INFO:root:Seen so far 88008 samples
+INFO:root:Training loss for one batch at step 11200: 0.024428341537714005
+INFO:root:Seen so far 89608 samples
+INFO:root:Training loss for one batch at step 11400: 0.008505980484187603
+INFO:root:Seen so far 91208 samples
+INFO:root:Training loss for one batch at step 11600: 9.782871347852051e-05
+INFO:root:Seen so far 92808 samples
+INFO:root:Training loss for one batch at step 11800: 6.898158608237281e-05
+INFO:root:Seen so far 94408 samples
+INFO:root:Training loss for one batch at step 12000: 0.00788365863263607
+INFO:root:Seen so far 96008 samples
+INFO:root:Training loss for one batch at step 12200: 7.399973401334137e-05
+INFO:root:Seen so far 97608 samples
+INFO:root:Training loss for one batch at step 12400: 0.00491422088816762
+INFO:root:Seen so far 99208 samples
+INFO:root:Training loss for one batch at step 12600: 0.00042949881753884256
+INFO:root:Seen so far 100808 samples
+INFO:root:Training loss for one batch at step 12800: 0.014738332480192184
+INFO:root:Seen so far 102408 samples
+INFO:root:Training loss for one batch at step 13000: 0.12792252004146576
+INFO:root:Seen so far 104008 samples
+INFO:root:Training loss for one batch at step 13200: 3.471496165730059e-05
+INFO:root:Seen so far 105608 samples
+INFO:root:Training loss for one batch at step 13400: 7.716077379882336e-05
+INFO:root:Seen so far 107208 samples
+INFO:root:Training loss for one batch at step 13600: 0.002781717339530587
+INFO:root:Seen so far 108808 samples
+INFO:root:Training loss for one batch at step 13800: 0.0007876271265558898
+INFO:root:Seen so far 110408 samples
+INFO:root:Training loss for one batch at step 14000: 7.94738662079908e-05
+INFO:root:Seen so far 112008 samples
+INFO:root:Training loss for one batch at step 14200: 0.02150476723909378
+INFO:root:Seen so far 113608 samples
+INFO:root:Training loss for one batch at step 14400: 0.003791590454056859
+INFO:root:Seen so far 115208 samples
+INFO:root:Training loss for one batch at step 14600: 3.796246892306954e-05
+INFO:root:Seen so far 116808 samples
+INFO:root:Training loss for one batch at step 14800: 3.374715015524998e-05
+INFO:root:Seen so far 118408 samples
+INFO:root:Training loss for one batch at step 15000: 0.0006464137113653123
+INFO:root:Seen so far 120008 samples
+INFO:root:Training loss for one batch at step 15200: 2.722160570556298e-05
+INFO:root:Seen so far 121608 samples
+INFO:root:Training loss for one batch at step 15400: 6.321270484477282e-05
+INFO:root:Seen so far 123208 samples
+INFO:root:Training loss for one batch at step 15600: 3.322551492601633e-05
+INFO:root:Seen so far 124808 samples
+INFO:root:Training loss for one batch at step 15800: 0.000736450485419482
+INFO:root:Seen so far 126408 samples
+INFO:root:Training loss for one batch at step 16000: 0.00048499650438316166
+INFO:root:Seen so far 128008 samples
+INFO:root:Training loss for one batch at step 16200: 3.0009956390131265e-05
+INFO:root:Seen so far 129608 samples
+INFO:root:Training loss for one batch at step 16400: 2.4958470021374524e-05
+INFO:root:Seen so far 131208 samples
+INFO:root:Training loss for one batch at step 16600: 0.0018155497964471579
+INFO:root:Seen so far 132808 samples
+INFO:root:Training loss for one batch at step 16800: 0.007423842325806618
+INFO:root:Seen so far 134408 samples
+INFO:root:Training loss for one batch at step 17000: 0.003675159066915512
+INFO:root:Seen so far 136008 samples
+INFO:root:Training loss for one batch at step 17200: 0.0002387927088420838
+INFO:root:Seen so far 137608 samples
+INFO:root:Training loss for one batch at step 17400: 0.0004168139130342752
+INFO:root:Seen so far 139208 samples
+INFO:root:Training loss for one batch at step 17600: 8.940695295223122e-08
+INFO:root:Seen so far 140808 samples
+INFO:root:Training loss for one batch at step 17800: 0.016948174685239792
+INFO:root:Seen so far 142408 samples
+INFO:root:Training acc over epoch: 0.9968214631080627
+WARNING:tensorflow:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+INFO:root:Validation acc: 0.9189952611923218
+INFO:root:Time taken for one epoch: 9568.21979379654
+INFO:root:Start of epoch 7
+INFO:root:Training loss for one batch at step 0: 0.00044670497300103307
+INFO:root:Seen so far 8 samples
+INFO:root:Training loss for one batch at step 200: 0.005291878245770931
+INFO:root:Seen so far 1608 samples
+INFO:root:Training loss for one batch at step 400: 4.426443774718791e-05
+INFO:root:Seen so far 3208 samples
+INFO:root:Training loss for one batch at step 600: 0.011017819866538048
+INFO:root:Seen so far 4808 samples
+INFO:root:Training loss for one batch at step 800: 0.0006401100545190275
+INFO:root:Seen so far 6408 samples
+INFO:root:Training loss for one batch at step 1000: 0.027065396308898926
+INFO:root:Seen so far 8008 samples
+INFO:root:Training loss for one batch at step 1200: 1.3321180631464813e-05
+INFO:root:Seen so far 9608 samples
+INFO:root:Training loss for one batch at step 1400: 0.0018995457794517279
+INFO:root:Seen so far 11208 samples
+INFO:root:Training loss for one batch at step 1600: 0.011475379578769207
+INFO:root:Seen so far 12808 samples
+INFO:root:Training loss for one batch at step 1800: 5.766672074969392e-06
+INFO:root:Seen so far 14408 samples
+INFO:root:Training loss for one batch at step 2000: 0.003626090008765459
+INFO:root:Seen so far 16008 samples
+INFO:root:Training loss for one batch at step 2200: 1.1771868457799428e-06
+INFO:root:Seen so far 17608 samples
+INFO:root:Training loss for one batch at step 2400: 0.0008523110300302505
+INFO:root:Seen so far 19208 samples
+INFO:root:Training loss for one batch at step 2600: 6.0488993767648935e-05
+INFO:root:Seen so far 20808 samples
+INFO:root:Training loss for one batch at step 2800: 0.0004740778240375221
+INFO:root:Seen so far 22408 samples
+INFO:root:Training loss for one batch at step 3000: 0.0002494023065082729
+INFO:root:Seen so far 24008 samples
+INFO:root:Training loss for one batch at step 3200: 0.00043268364970572293
+INFO:root:Seen so far 25608 samples
+INFO:root:Training loss for one batch at step 3400: 0.01826823316514492
+INFO:root:Seen so far 27208 samples
+INFO:root:Training loss for one batch at step 3600: 0.0005220728344283998
+INFO:root:Seen so far 28808 samples
+INFO:root:Training loss for one batch at step 3800: 3.4001670428551733e-05
+INFO:root:Seen so far 30408 samples
+INFO:root:Training loss for one batch at step 4000: 0.0002798032364808023
+INFO:root:Seen so far 32008 samples
+INFO:root:Training loss for one batch at step 4200: 1.9891933334292844e-05
+INFO:root:Seen so far 33608 samples
+INFO:root:Training loss for one batch at step 4400: 0.0006329079042188823
+INFO:root:Seen so far 35208 samples
+INFO:root:Training loss for one batch at step 4600: 0.0011247377842664719
+INFO:root:Seen so far 36808 samples
+INFO:root:Training loss for one batch at step 4800: 0.0021295396145433187
+INFO:root:Seen so far 38408 samples
+INFO:root:Training loss for one batch at step 5000: 6.802048301324248e-05
+INFO:root:Seen so far 40008 samples
+INFO:root:Training loss for one batch at step 5200: 0.008713032118976116
+INFO:root:Seen so far 41608 samples
+INFO:root:Training loss for one batch at step 5400: 0.008563634939491749
+INFO:root:Seen so far 43208 samples
+INFO:root:Training loss for one batch at step 5600: 0.004011340439319611
+INFO:root:Seen so far 44808 samples
+INFO:root:Training loss for one batch at step 5800: 0.00014961007400415838
+INFO:root:Seen so far 46408 samples
+INFO:root:Training loss for one batch at step 6000: 0.0013569946167990565
+INFO:root:Seen so far 48008 samples
+INFO:root:Training loss for one batch at step 6200: 0.021629028022289276
+INFO:root:Seen so far 49608 samples
+INFO:root:Training loss for one batch at step 6400: 1.9669475932460045e-06
+INFO:root:Seen so far 51208 samples
+INFO:root:Training loss for one batch at step 6600: 4.924117092741653e-05
+INFO:root:Seen so far 52808 samples
+INFO:root:Training loss for one batch at step 6800: 5.289803539199056e-06
+INFO:root:Seen so far 54408 samples
+INFO:root:Training loss for one batch at step 7000: 3.7950376281514764e-05
+INFO:root:Seen so far 56008 samples
+INFO:root:Training loss for one batch at step 7200: 0.0012623552465811372
+INFO:root:Seen so far 57608 samples
+INFO:root:Training loss for one batch at step 7400: 0.00042202603071928024
+INFO:root:Seen so far 59208 samples
+INFO:root:Training loss for one batch at step 7600: 0.0022180681116878986
+INFO:root:Seen so far 60808 samples
+INFO:root:Training loss for one batch at step 7800: 0.0008696243749000132
+INFO:root:Seen so far 62408 samples
+INFO:root:Training loss for one batch at step 8000: 0.021523261442780495
+INFO:root:Seen so far 64008 samples
+INFO:root:Training loss for one batch at step 8200: 0.010682828724384308
+INFO:root:Seen so far 65608 samples
+INFO:root:Training loss for one batch at step 8400: 0.00020224950276315212
+INFO:root:Seen so far 67208 samples
+INFO:root:Training loss for one batch at step 8600: 0.00010380780440755188
+INFO:root:Seen so far 68808 samples
+INFO:root:Training loss for one batch at step 8800: 0.013136264868080616
+INFO:root:Seen so far 70408 samples
+INFO:root:Training loss for one batch at step 9000: 1.4334384104586206e-05
+INFO:root:Seen so far 72008 samples
+INFO:root:Training loss for one batch at step 9200: 0.0001809017703635618
+INFO:root:Seen so far 73608 samples
+INFO:root:Training loss for one batch at step 9400: 0.0331379733979702
+INFO:root:Seen so far 75208 samples
+INFO:root:Training loss for one batch at step 9600: 0.0015818498795852065
+INFO:root:Seen so far 76808 samples
+INFO:root:Training loss for one batch at step 9800: 3.3450833143433556e-05
+INFO:root:Seen so far 78408 samples
+INFO:root:Training loss for one batch at step 10000: 6.02020081714727e-05
+INFO:root:Seen so far 80008 samples
+INFO:root:Training loss for one batch at step 10200: 0.0017724167555570602
+INFO:root:Seen so far 81608 samples
+INFO:root:Training loss for one batch at step 10400: 2.5331954134344414e-07
+INFO:root:Seen so far 83208 samples
+INFO:root:Training loss for one batch at step 10600: 0.005391682498157024
+INFO:root:Seen so far 84808 samples
+INFO:root:Training loss for one batch at step 10800: 2.980220870085759e-06
+INFO:root:Seen so far 86408 samples
+INFO:root:Training loss for one batch at step 11000: 0.0004099988436792046
+INFO:root:Seen so far 88008 samples
+INFO:root:Training loss for one batch at step 11200: 0.020958388224244118
+INFO:root:Seen so far 89608 samples
+INFO:root:Training loss for one batch at step 11400: 0.011335568502545357
+INFO:root:Seen so far 91208 samples
+INFO:root:Training loss for one batch at step 11600: 5.2620816859416664e-05
+INFO:root:Seen so far 92808 samples
+INFO:root:Training loss for one batch at step 11800: 6.601091627089772e-06
+INFO:root:Seen so far 94408 samples
+INFO:root:Training loss for one batch at step 12000: 0.001955627463757992
+INFO:root:Seen so far 96008 samples
+INFO:root:Training loss for one batch at step 12200: 7.902678044047207e-05
+INFO:root:Seen so far 97608 samples
+INFO:root:Training loss for one batch at step 12400: 0.016175193712115288
+INFO:root:Seen so far 99208 samples
+INFO:root:Training loss for one batch at step 12600: 7.601540710311383e-05
+INFO:root:Seen so far 100808 samples
+INFO:root:Training loss for one batch at step 12800: 0.008533603511750698
+INFO:root:Seen so far 102408 samples
+INFO:root:Training loss for one batch at step 13000: 0.005061159376055002
+INFO:root:Seen so far 104008 samples
+INFO:root:Training loss for one batch at step 13200: 2.0710936951218173e-05
+INFO:root:Seen so far 105608 samples
+INFO:root:Training loss for one batch at step 13400: 1.618215537746437e-05
+INFO:root:Seen so far 107208 samples
+INFO:root:Training loss for one batch at step 13600: 0.014240195974707603
+INFO:root:Seen so far 108808 samples
+INFO:root:Training loss for one batch at step 13800: 0.00023548347235191613
+INFO:root:Seen so far 110408 samples
+INFO:root:Training loss for one batch at step 14000: 6.079565082472982e-06
+INFO:root:Seen so far 112008 samples
+INFO:root:Training loss for one batch at step 14200: 0.02104663848876953
+INFO:root:Seen so far 113608 samples
+INFO:root:Training loss for one batch at step 14400: 0.0010716310935094953
+INFO:root:Seen so far 115208 samples
+INFO:root:Training loss for one batch at step 14600: 8.758834155742079e-05
+INFO:root:Seen so far 116808 samples
+INFO:root:Training loss for one batch at step 14800: 8.07631658972241e-06
+INFO:root:Seen so far 118408 samples
+INFO:root:Training loss for one batch at step 15000: 0.0007289047352969646
+INFO:root:Seen so far 120008 samples
+INFO:root:Training loss for one batch at step 15200: 3.493846088531427e-05
+INFO:root:Seen so far 121608 samples
+INFO:root:Training loss for one batch at step 15400: 0.00011824788816738874
+INFO:root:Seen so far 123208 samples
+INFO:root:Training loss for one batch at step 15600: 0.0007577483193017542
+INFO:root:Seen so far 124808 samples
+INFO:root:Training loss for one batch at step 15800: 0.0005861978279426694
+INFO:root:Seen so far 126408 samples
+INFO:root:Training loss for one batch at step 16000: 0.0006132673588581383
+INFO:root:Seen so far 128008 samples
+INFO:root:Training loss for one batch at step 16200: 1.5526678907917812e-05
+INFO:root:Seen so far 129608 samples
+INFO:root:Training loss for one batch at step 16400: 3.420940265641548e-05
+INFO:root:Seen so far 131208 samples
+INFO:root:Training loss for one batch at step 16600: 0.003322634845972061
+INFO:root:Seen so far 132808 samples
+INFO:root:Training loss for one batch at step 16800: 0.0025384281761944294
+INFO:root:Seen so far 134408 samples
+INFO:root:Training loss for one batch at step 17000: 0.002176387934014201
+INFO:root:Seen so far 136008 samples
+INFO:root:Training loss for one batch at step 17200: 0.0003016483969986439
+INFO:root:Seen so far 137608 samples
+INFO:root:Training loss for one batch at step 17400: 0.0001403706264682114
+INFO:root:Seen so far 139208 samples
+INFO:root:Training loss for one batch at step 17600: 2.9802320611338473e-08
+INFO:root:Seen so far 140808 samples
+INFO:root:Training loss for one batch at step 17800: 0.05595770105719566
+INFO:root:Seen so far 142408 samples
+INFO:root:Training acc over epoch: 0.9978368878364563
+WARNING:tensorflow:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+INFO:root:Validation acc: 0.9005886912345886
+INFO:root:Time taken for one epoch: 9711.543960094452
+INFO:root:Start of epoch 8
+INFO:root:Training loss for one batch at step 0: 0.0005903299315832555
+INFO:root:Seen so far 8 samples
+INFO:root:Training loss for one batch at step 200: 0.004831522237509489
+INFO:root:Seen so far 1608 samples
+INFO:root:Training loss for one batch at step 400: 5.0759656005539e-05
+INFO:root:Seen so far 3208 samples
+INFO:root:Training loss for one batch at step 600: 0.0037868309300392866
+INFO:root:Seen so far 4808 samples
+INFO:root:Training loss for one batch at step 800: 0.00025031459517776966
+INFO:root:Seen so far 6408 samples
+INFO:root:Training loss for one batch at step 1000: 0.0480828694999218
+INFO:root:Seen so far 8008 samples
+INFO:root:Training loss for one batch at step 1200: 8.418962352152448e-06
+INFO:root:Seen so far 9608 samples
+INFO:root:Training loss for one batch at step 1400: 0.00048800031072460115
+INFO:root:Seen so far 11208 samples
+INFO:root:Training loss for one batch at step 1600: 0.0016731047071516514
+INFO:root:Seen so far 12808 samples
+INFO:root:Training loss for one batch at step 1800: 3.263329290348338e-06
+INFO:root:Seen so far 14408 samples
+INFO:root:Training loss for one batch at step 2000: 0.010098873637616634
+INFO:root:Seen so far 16008 samples
+INFO:root:Training loss for one batch at step 2200: 3.5762738548328343e-07
+INFO:root:Seen so far 17608 samples
+INFO:root:Training loss for one batch at step 2400: 0.0013741388684138656
+INFO:root:Seen so far 19208 samples
+INFO:root:Training loss for one batch at step 2600: 2.5732992071425542e-05
+INFO:root:Seen so far 20808 samples
+INFO:root:Training loss for one batch at step 2800: 5.475002035382204e-05
+INFO:root:Seen so far 22408 samples
+INFO:root:Training loss for one batch at step 3000: 8.197783608920872e-05
+INFO:root:Seen so far 24008 samples
+INFO:root:Training loss for one batch at step 3200: 3.456597914919257e-05
+INFO:root:Seen so far 25608 samples
+INFO:root:Training loss for one batch at step 3400: 0.0012530733365565538
+INFO:root:Seen so far 27208 samples
+INFO:root:Training loss for one batch at step 3600: 0.0002654234995134175
+INFO:root:Seen so far 28808 samples
+INFO:root:Training loss for one batch at step 3800: 7.688781806791667e-06
+INFO:root:Seen so far 30408 samples
+INFO:root:Training loss for one batch at step 4000: 5.262298509478569e-05
+INFO:root:Seen so far 32008 samples
+INFO:root:Training loss for one batch at step 4200: 2.544945527915843e-05
+INFO:root:Seen so far 33608 samples
+INFO:root:Training loss for one batch at step 4400: 0.00017338903853669763
+INFO:root:Seen so far 35208 samples
+INFO:root:Training loss for one batch at step 4600: 3.11409639834892e-05
+INFO:root:Seen so far 36808 samples
+INFO:root:Training loss for one batch at step 4800: 0.00034683203557506204
+INFO:root:Seen so far 38408 samples
+INFO:root:Training loss for one batch at step 5000: 0.0004502323572523892
+INFO:root:Seen so far 40008 samples
+INFO:root:Training loss for one batch at step 5200: 0.0061963400803506374
+INFO:root:Seen so far 41608 samples
+INFO:root:Training loss for one batch at step 5400: 0.0024812675546854734
+INFO:root:Seen so far 43208 samples
+INFO:root:Training loss for one batch at step 5600: 0.1486518681049347
+INFO:root:Seen so far 44808 samples
+INFO:root:Training loss for one batch at step 5800: 2.7253467123955488e-05
+INFO:root:Seen so far 46408 samples
+INFO:root:Training loss for one batch at step 6000: 0.0010002502240240574
+INFO:root:Seen so far 48008 samples
+INFO:root:Training loss for one batch at step 6200: 0.014159280806779861
+INFO:root:Seen so far 49608 samples
+INFO:root:Training loss for one batch at step 6400: 2.3096722543414216e-06
+INFO:root:Seen so far 51208 samples
+INFO:root:Training loss for one batch at step 6600: 7.018344604148297e-06
+INFO:root:Seen so far 52808 samples
+INFO:root:Training loss for one batch at step 6800: 8.105968845484313e-06
+INFO:root:Seen so far 54408 samples
+INFO:root:Training loss for one batch at step 7000: 3.541733531164937e-05
+INFO:root:Seen so far 56008 samples
+INFO:root:Training loss for one batch at step 7200: 0.002156563801690936
+INFO:root:Seen so far 57608 samples
+INFO:root:Training loss for one batch at step 7400: 0.0007189592579379678
+INFO:root:Seen so far 59208 samples
+INFO:root:Training loss for one batch at step 7600: 0.004692610818892717
+INFO:root:Seen so far 60808 samples
+INFO:root:Training loss for one batch at step 7800: 0.0009109543752856553
+INFO:root:Seen so far 62408 samples
+INFO:root:Training loss for one batch at step 8000: 0.011259499005973339
+INFO:root:Seen so far 64008 samples
+INFO:root:Training loss for one batch at step 8200: 0.00341583089902997
+INFO:root:Seen so far 65608 samples
+INFO:root:Training loss for one batch at step 8400: 9.905728802550584e-05
+INFO:root:Seen so far 67208 samples
+INFO:root:Training loss for one batch at step 8600: 0.00020880102238152176
+INFO:root:Seen so far 68808 samples
+INFO:root:Training loss for one batch at step 8800: 0.0072522577829658985
+INFO:root:Seen so far 70408 samples
+INFO:root:Training loss for one batch at step 9000: 1.2009852071059868e-05
+INFO:root:Seen so far 72008 samples
+INFO:root:Training loss for one batch at step 9200: 0.0003369344922248274
+INFO:root:Seen so far 73608 samples
+INFO:root:Training loss for one batch at step 9400: 0.01454918086528778
+INFO:root:Seen so far 75208 samples
+INFO:root:Training loss for one batch at step 9600: 0.001356908935122192
+INFO:root:Seen so far 76808 samples
+INFO:root:Training loss for one batch at step 9800: 1.8357561202719808e-05
+INFO:root:Seen so far 78408 samples
+INFO:root:Training loss for one batch at step 10000: 5.9188671002630144e-05
+INFO:root:Seen so far 80008 samples
+INFO:root:Training loss for one batch at step 10200: 0.0005475013749673963
+INFO:root:Seen so far 81608 samples
+INFO:root:Training loss for one batch at step 10400: 1.579513082106132e-06
+INFO:root:Seen so far 83208 samples
+INFO:root:Training loss for one batch at step 10600: 0.0025663147680461407
+INFO:root:Seen so far 84808 samples
+INFO:root:Training loss for one batch at step 10800: 1.9490027625579387e-05
+INFO:root:Seen so far 86408 samples
+INFO:root:Training loss for one batch at step 11000: 0.004217325244098902
+INFO:root:Seen so far 88008 samples
+INFO:root:Training loss for one batch at step 11200: 0.010627387091517448
+INFO:root:Seen so far 89608 samples
+INFO:root:Training loss for one batch at step 11400: 0.0008970496710389853
+INFO:root:Seen so far 91208 samples
+INFO:root:Training loss for one batch at step 11600: 1.318697104579769e-05
+INFO:root:Seen so far 92808 samples
+INFO:root:Training loss for one batch at step 11800: 5.066340690973448e-06
+INFO:root:Seen so far 94408 samples
+INFO:root:Training loss for one batch at step 12000: 0.0005747955874539912
+INFO:root:Seen so far 96008 samples
+INFO:root:Training loss for one batch at step 12200: 2.3199441784527153e-05
+INFO:root:Seen so far 97608 samples
+INFO:root:Training loss for one batch at step 12400: 0.0016431610565632582
+INFO:root:Seen so far 99208 samples
+INFO:root:Training loss for one batch at step 12600: 1.5705345504102297e-05
+INFO:root:Seen so far 100808 samples
+INFO:root:Training loss for one batch at step 12800: 0.001976935425773263
+INFO:root:Seen so far 102408 samples
+INFO:root:Training loss for one batch at step 13000: 0.004045987967401743
+INFO:root:Seen so far 104008 samples
+INFO:root:Training loss for one batch at step 13200: 3.6358426314109238e-06
+INFO:root:Seen so far 105608 samples
+INFO:root:Training loss for one batch at step 13400: 3.4983262594323605e-05
+INFO:root:Seen so far 107208 samples
+INFO:root:Training loss for one batch at step 13600: 0.004093435127288103
+INFO:root:Seen so far 108808 samples
+INFO:root:Training loss for one batch at step 13800: 0.0002592198143247515
+INFO:root:Seen so far 110408 samples
+INFO:root:Training loss for one batch at step 14000: 1.6658406821079552e-05
+INFO:root:Seen so far 112008 samples
+INFO:root:Training loss for one batch at step 14200: 0.012105901725590229
+INFO:root:Seen so far 113608 samples
+INFO:root:Training loss for one batch at step 14400: 0.0006333690835162997
+INFO:root:Seen so far 115208 samples
+INFO:root:Training loss for one batch at step 14600: 0.00023115685326047242
+INFO:root:Seen so far 116808 samples
+INFO:root:Training loss for one batch at step 14800: 9.044742000696715e-06
+INFO:root:Seen so far 118408 samples
+INFO:root:Training loss for one batch at step 15000: 0.0003124181821476668
+INFO:root:Seen so far 120008 samples
+INFO:root:Training loss for one batch at step 15200: 2.488474137862795e-06
+INFO:root:Seen so far 121608 samples
+INFO:root:Training loss for one batch at step 15400: 1.6837653674883768e-05
+INFO:root:Seen so far 123208 samples
+INFO:root:Training loss for one batch at step 15600: 1.2441933904483449e-05
+INFO:root:Seen so far 124808 samples
+INFO:root:Training loss for one batch at step 15800: 0.00016378413420170546
+INFO:root:Seen so far 126408 samples
+INFO:root:Training loss for one batch at step 16000: 0.0004435750306583941
+INFO:root:Seen so far 128008 samples
+INFO:root:Training loss for one batch at step 16200: 3.7413112295325845e-05
+INFO:root:Seen so far 129608 samples
+INFO:root:Training loss for one batch at step 16400: 2.2886837541591376e-05
+INFO:root:Seen so far 131208 samples
+INFO:root:Training loss for one batch at step 16600: 0.0013925732346251607
+INFO:root:Seen so far 132808 samples
+INFO:root:Training loss for one batch at step 16800: 0.005760041065514088
+INFO:root:Seen so far 134408 samples
+INFO:root:Training loss for one batch at step 17000: 0.0013734259409829974
+INFO:root:Seen so far 136008 samples
+INFO:root:Training loss for one batch at step 17200: 0.00017714433488436043
+INFO:root:Seen so far 137608 samples
+INFO:root:Training loss for one batch at step 17400: 7.439924956997856e-05
+INFO:root:Seen so far 139208 samples
+INFO:root:Training loss for one batch at step 17600: 0.0
+INFO:root:Seen so far 140808 samples
+INFO:root:Training loss for one batch at step 17800: 0.02061033621430397
+INFO:root:Seen so far 142408 samples
+INFO:root:Training acc over epoch: 0.9984142184257507
+WARNING:tensorflow:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+INFO:root:Validation acc: 0.912833571434021
+INFO:root:Time taken for one epoch: 9433.550754785538
+INFO:root:Start of epoch 9
+INFO:root:Training loss for one batch at step 0: 0.00028768539777956903
+INFO:root:Seen so far 8 samples
+INFO:root:Training loss for one batch at step 200: 0.00528236199170351
+INFO:root:Seen so far 1608 samples
+INFO:root:Training loss for one batch at step 400: 1.26954282677616e-05
+INFO:root:Seen so far 3208 samples
+INFO:root:Training loss for one batch at step 600: 0.0014678474981337786
+INFO:root:Seen so far 4808 samples
+INFO:root:Training loss for one batch at step 800: 0.00013274443335831165
+INFO:root:Seen so far 6408 samples
+INFO:root:Training loss for one batch at step 1000: 0.018906045705080032
+INFO:root:Seen so far 8008 samples
+INFO:root:Training loss for one batch at step 1200: 3.3527426239743363e-06
+INFO:root:Seen so far 9608 samples
+INFO:root:Training loss for one batch at step 1400: 0.0005767886177636683
+INFO:root:Seen so far 11208 samples
+INFO:root:Training loss for one batch at step 1600: 0.0029593314975500107
+INFO:root:Seen so far 12808 samples
+INFO:root:Training loss for one batch at step 1800: 3.7103388876857935e-06
+INFO:root:Seen so far 14408 samples
+INFO:root:Training loss for one batch at step 2000: 0.010815291665494442
+INFO:root:Seen so far 16008 samples
+INFO:root:Training loss for one batch at step 2200: 5.364410071706516e-07
+INFO:root:Seen so far 17608 samples
+INFO:root:Training loss for one batch at step 2400: 0.0009304510895162821
+INFO:root:Seen so far 19208 samples
+INFO:root:Training loss for one batch at step 2600: 4.328413342591375e-05
+INFO:root:Seen so far 20808 samples
+INFO:root:Training loss for one batch at step 2800: 0.000258165062405169
+INFO:root:Seen so far 22408 samples
+INFO:root:Training loss for one batch at step 3000: 0.0006951874820515513
+INFO:root:Seen so far 24008 samples
+INFO:root:Training loss for one batch at step 3200: 2.1277099222061224e-05
+INFO:root:Seen so far 25608 samples
+INFO:root:Training loss for one batch at step 3400: 0.001135806436650455
+INFO:root:Seen so far 27208 samples
+INFO:root:Training loss for one batch at step 3600: 0.0002641835017129779
+INFO:root:Seen so far 28808 samples
+INFO:root:Training loss for one batch at step 3800: 1.054960648616543e-05
+INFO:root:Seen so far 30408 samples
+INFO:root:Training loss for one batch at step 4000: 2.6655730835045688e-05
+INFO:root:Seen so far 32008 samples
+INFO:root:Training loss for one batch at step 4200: 1.798486482584849e-05
+INFO:root:Seen so far 33608 samples
+INFO:root:Training loss for one batch at step 4400: 8.93172255018726e-05
+INFO:root:Seen so far 35208 samples
+INFO:root:Training loss for one batch at step 4600: 4.598008672473952e-05
+INFO:root:Seen so far 36808 samples
+INFO:root:Training loss for one batch at step 4800: 0.00023529444297309965
+INFO:root:Seen so far 38408 samples
+INFO:root:Training loss for one batch at step 5000: 0.00036628544330596924
+INFO:root:Seen so far 40008 samples
+INFO:root:Training loss for one batch at step 5200: 0.004097293596714735
+INFO:root:Seen so far 41608 samples
+INFO:root:Training loss for one batch at step 5400: 0.0004262365400791168
+INFO:root:Seen so far 43208 samples
+INFO:root:Training loss for one batch at step 5600: 0.008398796431720257
+INFO:root:Seen so far 44808 samples
+INFO:root:Training loss for one batch at step 5800: 1.8163917047786526e-05
+INFO:root:Seen so far 46408 samples
+INFO:root:Training loss for one batch at step 6000: 0.000768066558521241
+INFO:root:Seen so far 48008 samples
+INFO:root:Training loss for one batch at step 6200: 0.006984118837863207
+INFO:root:Seen so far 49608 samples
+INFO:root:Training loss for one batch at step 6400: 1.2903858987556305e-05
+INFO:root:Seen so far 51208 samples
+INFO:root:Training loss for one batch at step 6600: 4.514989996096119e-06
+INFO:root:Seen so far 52808 samples
+INFO:root:Training loss for one batch at step 6800: 8.642643365419644e-07
+INFO:root:Seen so far 54408 samples
+INFO:root:Training loss for one batch at step 7000: 5.469148527481593e-05
+INFO:root:Seen so far 56008 samples
+INFO:root:Training loss for one batch at step 7200: 0.0041834209114313126
+INFO:root:Seen so far 57608 samples
+INFO:root:Training loss for one batch at step 7400: 0.00022813407122157514
+INFO:root:Seen so far 59208 samples
+INFO:root:Training loss for one batch at step 7600: 0.005295746494084597
+INFO:root:Seen so far 60808 samples
+INFO:root:Training loss for one batch at step 7800: 0.001168724149465561
+INFO:root:Seen so far 62408 samples
+INFO:root:Training loss for one batch at step 8000: 0.014544692821800709
+INFO:root:Seen so far 64008 samples
+INFO:root:Training loss for one batch at step 8200: 0.00233801850117743
+INFO:root:Seen so far 65608 samples
+INFO:root:Training loss for one batch at step 8400: 7.72636485635303e-05
+INFO:root:Seen so far 67208 samples
+INFO:root:Training loss for one batch at step 8600: 0.0003243328828830272
+INFO:root:Seen so far 68808 samples
+INFO:root:Training loss for one batch at step 8800: 0.009118743240833282
+INFO:root:Seen so far 70408 samples
+INFO:root:Training loss for one batch at step 9000: 2.726897491811542e-06
+INFO:root:Seen so far 72008 samples
+INFO:root:Training loss for one batch at step 9200: 0.0003644745156634599
+INFO:root:Seen so far 73608 samples
+INFO:root:Training loss for one batch at step 9400: 0.011921710334718227
+INFO:root:Seen so far 75208 samples
+INFO:root:Training loss for one batch at step 9600: 0.0033394070342183113
+INFO:root:Seen so far 76808 samples
+INFO:root:Training loss for one batch at step 9800: 2.3543771021650173e-06
+INFO:root:Seen so far 78408 samples
+INFO:root:Training loss for one batch at step 10000: 0.00028528517577797174
+INFO:root:Seen so far 80008 samples
+INFO:root:Training loss for one batch at step 10200: 0.003750931704416871
+INFO:root:Seen so far 81608 samples
+INFO:root:Training loss for one batch at step 10400: 2.935494649136672e-06
+INFO:root:Seen so far 83208 samples
+INFO:root:Training loss for one batch at step 10600: 0.00017237947031389922
+INFO:root:Seen so far 84808 samples
+INFO:root:Training loss for one batch at step 10800: 5.0961725719389506e-06
+INFO:root:Seen so far 86408 samples
+INFO:root:Training loss for one batch at step 11000: 0.0017577956896275282
+INFO:root:Seen so far 88008 samples
+INFO:root:Training loss for one batch at step 11200: 0.015846246853470802
+INFO:root:Seen so far 89608 samples
+INFO:root:Training loss for one batch at step 11400: 0.038294125348329544
+INFO:root:Seen so far 91208 samples
+INFO:root:Training loss for one batch at step 11600: 7.405698397633387e-06
+INFO:root:Seen so far 92808 samples
+INFO:root:Training loss for one batch at step 11800: 6.705513442284428e-07
+INFO:root:Seen so far 94408 samples
+INFO:root:Training loss for one batch at step 12000: 0.0003952078986912966
+INFO:root:Seen so far 96008 samples
+INFO:root:Training loss for one batch at step 12200: 0.0001929515419760719
+INFO:root:Seen so far 97608 samples
+INFO:root:Training loss for one batch at step 12400: 0.0004847684467677027
+INFO:root:Seen so far 99208 samples
+INFO:root:Training loss for one batch at step 12600: 3.808461769949645e-05
+INFO:root:Seen so far 100808 samples
+INFO:root:Training loss for one batch at step 12800: 0.0010392535477876663
+INFO:root:Seen so far 102408 samples
+INFO:root:Training loss for one batch at step 13000: 0.01315016858279705
+INFO:root:Seen so far 104008 samples
+INFO:root:Training loss for one batch at step 13200: 3.4272215998498723e-06
+INFO:root:Seen so far 105608 samples
+INFO:root:Training loss for one batch at step 13400: 3.7699646782130003e-06
+INFO:root:Seen so far 107208 samples
+INFO:root:Training loss for one batch at step 13600: 0.05089877173304558
+INFO:root:Seen so far 108808 samples
+INFO:root:Training loss for one batch at step 13800: 0.0004575271741487086
+INFO:root:Seen so far 110408 samples
+INFO:root:Training loss for one batch at step 14000: 2.682185368030332e-06
+INFO:root:Seen so far 112008 samples
+INFO:root:Training loss for one batch at step 14200: 0.001523593906313181
+INFO:root:Seen so far 113608 samples
+INFO:root:Training loss for one batch at step 14400: 0.0012737114448100328
+INFO:root:Seen so far 115208 samples
+INFO:root:Training loss for one batch at step 14600: 0.0006661674124188721
+INFO:root:Seen so far 116808 samples
+INFO:root:Training loss for one batch at step 14800: 5.364355729398085e-06
+INFO:root:Seen so far 118408 samples
+INFO:root:Training loss for one batch at step 15000: 0.00014152420044410974
+INFO:root:Seen so far 120008 samples
+INFO:root:Training loss for one batch at step 15200: 6.8394556365092285e-06
+INFO:root:Seen so far 121608 samples
+INFO:root:Training loss for one batch at step 15400: 2.2141222871141508e-05
+INFO:root:Seen so far 123208 samples
+INFO:root:Training loss for one batch at step 15600: 4.401078331284225e-05
+INFO:root:Seen so far 124808 samples
+INFO:root:Training loss for one batch at step 15800: 0.0003544192004483193
+INFO:root:Seen so far 126408 samples
+INFO:root:Training loss for one batch at step 16000: 0.00032789516262710094
+INFO:root:Seen so far 128008 samples
+INFO:root:Training loss for one batch at step 16200: 4.172270564595237e-06
+INFO:root:Seen so far 129608 samples
+INFO:root:Training loss for one batch at step 16400: 4.827931661566254e-06
+INFO:root:Seen so far 131208 samples
+INFO:root:Training loss for one batch at step 16600: 0.0008890163735486567
+INFO:root:Seen so far 132808 samples
+INFO:root:Training loss for one batch at step 16800: 0.004180924966931343
+INFO:root:Seen so far 134408 samples
+INFO:root:Training loss for one batch at step 17000: 0.001197455683723092
+INFO:root:Seen so far 136008 samples
+INFO:root:Training loss for one batch at step 17200: 2.641867467900738e-05
+INFO:root:Seen so far 137608 samples
+INFO:root:Training loss for one batch at step 17400: 0.000193764892173931
+INFO:root:Seen so far 139208 samples
+INFO:root:Training loss for one batch at step 17600: 1.4901160305669237e-08
+INFO:root:Seen so far 140808 samples
+INFO:root:Training loss for one batch at step 17800: 0.03946961835026741
+INFO:root:Seen so far 142408 samples
+INFO:root:Training acc over epoch: 0.9989358186721802
+WARNING:tensorflow:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+INFO:root:Validation acc: 0.9075353145599365
+INFO:root:Time taken for one epoch: 9941.808785915375
