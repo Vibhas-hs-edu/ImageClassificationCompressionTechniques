@@ -12,3 +12,6 @@ resnet20/
 #Ignore pycache
 __pycache__
 *.pyc
+
+# ignore notebook checkpoints
+.ipynb_checkpoints
