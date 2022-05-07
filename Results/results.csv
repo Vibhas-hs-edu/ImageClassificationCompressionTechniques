@@ -1,1 +1,4 @@
-SlNo, ModelName, ModelSize, TrainAccuracy, ValidationAccuracy, TrainTime, Comments
+SlNo, ModelName, ModelSize, BestTrainAccuracy, TrainEpoch, ValidationAccuracy, BestValidationEpoch, TrainTime, Comments
+
+1,	ResNet18Uncompressed,		99.68,	10,	94.17,	10,	4847	
+2,	ResNet50Uncompressed,		99.89,	10,	93.13,	5,	10621	
