@@ -5,8 +5,8 @@ import os
 from pathlib import Path
 
 input_shape = (512, 512, 3)
-best_resnet18_epoch = 10
-best_resnet50_epoch = 5
+best_resnet18_epoch = 9
+best_resnet50_epoch = 4
 num_classes = 3
 depth = 20
 num_clusters = 16
@@ -34,6 +34,6 @@ for num_cluster in num_clusters:
     cluster_and_save_model(uncompressed_model_file =  f'Results/ResNet50/ResNet50_{best_resnet50_epoch}.h5', 
                         cluster_model_name = "ResNet50_Cluster",
                         save_path = f'Results/ResNet50/ResNet50_Cluster_{num_cluster}_{best_resnet50_epoch}.h5',
-                        batch_size = 16, num_clusters = num_clusters)
+                        batch_size = 8, num_clusters = num_clusters)
     print(f'Finished clustering for {num_cluster} for ResNet50')
     print()
