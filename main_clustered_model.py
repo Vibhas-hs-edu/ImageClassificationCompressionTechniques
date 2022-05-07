@@ -5,8 +5,8 @@ import os
 from pathlib import Path
 
 input_shape = (512, 512, 3)
-epoch_5 = 5
-epoch_4 = 4
+best_resnet18_epoch = 10
+best_resnet50_epoch = 5
 num_classes = 3
 depth = 20
 num_clusters = 16
@@ -20,12 +20,20 @@ def cluster_and_save_model(uncompressed_model_file, cluster_model_name, save_pat
     clustered_model = r_comp.model_cluster
     clustered_model.save(save_path)
 
-cluster_and_save_model(uncompressed_model_file =  f'Results/ResNet18/ResNet_{epoch_5}.h5', 
-                        cluster_model_name = "ResNet18_Cluster",
-                        save_path = f'Results/ResNet18/ResNet_Cluster_{epoch_5}.h5',
-                        batch_size = 16, num_clusters = num_clusters)
+num_clusters = [32, 64, 128]
 
-cluster_and_save_model(uncompressed_model_file =  f'Results/ResNet50/ResNet50_{epoch_4}.h5', 
-                        cluster_model_name = "ResNet50_Cluster",
-                        save_path = f'Results/ResNet50/ResNet50_Cluster_{epoch_4}.h5',
+for num_cluster in num_clusters:
+    print(f'Generating clustering for {num_cluster} for ResNet18')
+    cluster_and_save_model(uncompressed_model_file =  f'Results/ResNet18/ResNet_{best_resnet18_epoch}.h5', 
+                        cluster_model_name = "ResNet18_Cluster",
+                        save_path = f'Results/ResNet18/ResNet_Cluster_{num_cluster}_{best_resnet18_epoch}.h5',
                         batch_size = 16, num_clusters = num_clusters)
+    print(f'Finished clustering for ResNet18')
+    print()
+    print(f'Generating clustering for {num_cluster} for ResNet50')
+    cluster_and_save_model(uncompressed_model_file =  f'Results/ResNet50/ResNet50_{best_resnet50_epoch}.h5', 
+                        cluster_model_name = "ResNet50_Cluster",
+                        save_path = f'Results/ResNet50/ResNet50_Cluster_{num_cluster}_{best_resnet50_epoch}.h5',
+                        batch_size = 16, num_clusters = num_clusters)
+    print(f'Finished clustering for {num_cluster} for ResNet50')
+    print()

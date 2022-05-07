@@ -4,8 +4,8 @@ import os
 from pathlib import Path
 
 input_shape = (512, 512, 3)
-epoch_5 = 5
-epoch_4 = 4
+best_resnet18_epoch = 10
+best_resnet50_epoch = 5
 num_classes = 3
 depth = 20
 
@@ -19,12 +19,12 @@ def prune_and_save_model(uncompressed_model_file, pruned_model_name, save_path, 
     pruned_model = r_comp.model_pruned
     pruned_model.save(save_path)
 
-prune_and_save_model(uncompressed_model_file =  f'Results/ResNet18/ResNet_{epoch_5}.h5', 
+prune_and_save_model(uncompressed_model_file =  f'Results/ResNet18/ResNet_{best_resnet18_epoch}.h5', 
                         pruned_model_name = "ResNet18_Pruned",
-                        save_path = f'Results/ResNet18/ResNet_Pruned_{epoch_5}.h5',
+                        save_path = f'Results/ResNet18/ResNet_Pruned_{best_resnet18_epoch}.h5',
                         batch_size = 16)
 
-prune_and_save_model(uncompressed_model_file =  f'Results/ResNet50/ResNet50_{epoch_4}.h5', 
+prune_and_save_model(uncompressed_model_file =  f'Results/ResNet50/ResNet50_{best_resnet50_epoch}.h5', 
                         pruned_model_name = "ResNet50_Pruned",
-                        save_path = f'Results/ResNet50/ResNet_Pruned_{epoch_4}.h5',
+                        save_path = f'Results/ResNet50/ResNet_Pruned_{best_resnet50_epoch}.h5',
                         batch_size = 16)

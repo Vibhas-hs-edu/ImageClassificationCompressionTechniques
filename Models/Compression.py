@@ -113,8 +113,6 @@ class Prune:
         num_classes = 3
 
         for step, (x_batch_train, y_batch_train) in enumerate(train_generator):
-            if step >= 100:
-                break
             print('Current step', step)
             true_labels, true_bboxes = y_batch_train
             true_labels = tf.keras.utils.to_categorical(true_labels, num_classes)
@@ -123,8 +121,6 @@ class Prune:
 
 
         self.model = tfmot.sparsity.keras.strip_pruning(model_for_pruning)
-
-        
 
 class Cluster:
     def __init__(self, trained_model) -> None:
@@ -242,8 +238,7 @@ class Cluster:
         num_classes = 3
 
         for step, (x_batch_train, y_batch_train) in enumerate(train_generator):
-            if step >= 100:
-                break
+            print(step)
             true_labels, true_bboxes = y_batch_train
             y_train = tf.keras.utils.to_categorical(true_labels, num_classes)
             self.history = self.model.fit(x_batch_train, y_train,batch_size=batch_size,epochs=epochs)
