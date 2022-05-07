@@ -23,14 +23,15 @@ SKIP_MNIST = True
 #---Constants for ResNet Tests----#
 SKIP_RESNET_TESTS = True
 SKIP_RESNET_RUN = True
-SKIP_SAVE_RES20 = True
+SKIP_SAVE_RES20 = False
 RES20_NOT_SAVED = False
 RES20_FILE = 'res20.h5'
+RESNET_EPOCHS = 1
 #----------------------------------#
 
 # ---Constants for Compression Tests-----#
-SKIP_CLUSTER_TESTS = True
-SKIP_PRUNE_TESTS = True
+SKIP_CLUSTER_TESTS = False
+SKIP_PRUNE_TESTS = False
 SKIP_QUNATIZE_TESTS = True
 
 #-----------------------------------#
@@ -72,6 +73,10 @@ class TestAlexNet(unittest.TestCase):
         # I tested it and it achieves greater than 98% validation accuracy
         history = alex.model.fit(x_train, y_train, batch_size=64, epochs=1,
                                              validation_data=(x_val, y_val))
+
+        _, acc = alex.model.evaluate(x_test,y_test)
+
+        print(f"Accuracy of AlexNet: {acc*100 : 0.2f}")
 @unittest.skipIf(SKIP_RESNET_TESTS, 'Have already run resnet tests')
 class TestResNet(unittest.TestCase):
     def setUp(self) -> None:
@@ -137,15 +142,16 @@ class TestResNet(unittest.TestCase):
 
         # In one epoch, takes 30 minutes to train on my machine and gets 30% accuracy
         print("Training ResNet-20")
-        history = res20.model.fit(x_train, y_train,batch_size=128,epochs=1)
+        history = res20.model.fit(x_train, y_train,batch_size=128,epochs=RESNET_EPOCHS)
         
         # Saving model
         print("Saving model")
 
 
         
-        save_path = os.path.join(os.getcwd(),'resnet20/1/')
-        tf.saved_model.save(res20.model,save_path)
+        save_path = os.path.join(os.getcwd(),'resnet20/2/')
+        # tf.saved_model.save(res20.model,save_path)
+        res20.model.save(save_path)
     
     @unittest.skipIf(RES20_NOT_SAVED, "Haven't saved the model yet")
     def test_load_res20(self):
@@ -174,7 +180,7 @@ class TestResNet(unittest.TestCase):
 class TestCompression(unittest.TestCase):
 
     def setUp(self) -> None:
-        self.model = tf.keras.models.load_model(RES20_FILE)
+        self.model = tf.keras.models.load_model('resnet20/2')
 
         num_classes = 10
 
@@ -234,6 +240,9 @@ class TestCompression(unittest.TestCase):
 
         self.assertLess(baseline_acc-new_acc,2, f"The accuracy dropped by {baseline_acc-new_acc : 0.2f} which is more than 2")
 
+        # Save the pruned model
+        p.model.save('resnet20/pruned')
+
 
 
 
@@ -283,6 +292,8 @@ class TestCompression(unittest.TestCase):
         decrease_in_acc = prev_acc-new_acc
 
         self.assertLess(decrease_in_acc,2,"Accuracy decreased by greater than 2% after cluseting")
+
+        c.model.save('resnet20/clustered')
 
     @unittest.skipIf(SKIP_QUNATIZE_TESTS, 'Already ran quantize tests, want to save time')
     def test_quantize(self):
