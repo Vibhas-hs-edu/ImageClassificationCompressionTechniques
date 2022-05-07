@@ -11,6 +11,7 @@ resnet20/
 
 #Ignore pycache
 __pycache__
+Models/__pycache__
 *.pyc
 
 # ignore notebook checkpoints
