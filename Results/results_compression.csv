@@ -1,0 +1,12 @@
+SlNo, ModelName, ModelSize, TestAccuracy, InferenceTime
+
+1, ResNet20Pruned, 1,495,912 bytes, 92.88, 363.58
+2, ResNet50Pruned, 3,751,448 bytes, 92.21, 548.38
+3, ResNet20Clustered32, 1,454,384 bytes, 95.73, 385.74
+4, ResNet20Clustered64, 1,454,384 bytes, 95.75, 384.86
+5, ResNet20Clustered128, 1,454,384 bytes, 94.77, 386.99
+6, ResNet50Clustered32, 3,643,704 bytes, 92.12, 546.94
+7, ResNet50Clustered64, 3,643,704 bytes, 94.08, 541.59
+8, ResNet50Clustered128, 3,643,704 bytes, 93.22, 544.81
+9, ResNet20Uncompressed, 1,495,912 bytes, 95.08, 391.48
+10, ResNet50Uncomopressed, 3,751,448 bytes, 95.29, 546.94
