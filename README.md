@@ -47,3 +47,9 @@ This project is used for COMS 6998 Deep learning practical sys class. The owners
 ![ResNet20ModelTestAccuracy](Results/Graphs/ResNet50ModelAccuracy.jpg?raw=true "Resnet50 Model Accuracy Comparison")
 
 ![ResNet20ModelTestAccuracy](Results/Graphs/ResNet50ModelSize.jpg?raw=true "Resnet50 Model Size comparison")
+
+# Obersvations
+
+1) ResNet20 generalizes better in comparison to ResNet50
+2) There is a slight reduction in size from uncompressed to clustered compression model
+3) The test accuracy doesn't get affected when compression techniques are implemented.
