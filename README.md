@@ -37,3 +37,7 @@ This project is used for COMS 6998 Deep learning practical sys class. The owners
 
 # Convert to Tensorflow.js format
 - In order to convert a model from a normal Keras model to a tfjs compatible format, call `main_convert_tfjs.py input_file output_dir` where `input_file` is the path to the keras model you want to convert and `output_dir` is the directory you want to output the converted model.json and its weight binaries to
+
+# Results
+
+![ResNet20ModelTestAccuracy](Results/ResNet20ModelAccuracy.jpg?raw=true "Resnet20 Model Test Accuracy")
