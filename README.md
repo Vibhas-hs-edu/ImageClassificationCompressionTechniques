@@ -41,3 +41,9 @@ This project is used for COMS 6998 Deep learning practical sys class. The owners
 # Results
 
 ![ResNet20ModelTestAccuracy](Results/Graphs/ResNet20ModelAccuracy.jpg?raw=true "Resnet20 Model Test Accuracy")
+
+![ResNet20ModelTestAccuracy](Results/Graphs/ResNet20ModelSize.jpg?raw=true "Resnet20 Model Size comparison")
+
+![ResNet20ModelTestAccuracy](Results/Graphs/ResNet50ModelAccuracy.jpg?raw=true "Resnet50 Model Accuracy Comparison")
+
+![ResNet20ModelTestAccuracy](Results/Graphs/ResNet50ModelSize.jpg?raw=true "Resnet50 Model Size comparison")
